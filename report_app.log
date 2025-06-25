@@ -1,0 +1,328 @@
+2025-06-25 17:07:41,088 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 17:07:41,088 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 17:08:08,834 - INFO -    - ZPSDT003 records: 676
+2025-06-25 17:08:08,834 - INFO -    - Brand records: 9797
+2025-06-25 17:08:08,835 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 17:08:08,835 - ERROR - Error dalam proses report: 'DataProcessor' object has no attribute 'find_matching_zpsdt003'
+2025-06-25 17:09:17,108 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 17:09:17,109 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 17:09:44,450 - INFO -    - ZPSDT003 records: 676
+2025-06-25 17:09:44,451 - INFO -    - Brand records: 9797
+2025-06-25 17:09:44,452 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 17:09:44,454 - INFO -    - Ditemukan 1 data yang cocok
+2025-06-25 17:09:44,455 - INFO - 3. Mengambil daftar penerima...
+2025-06-25 17:09:44,542 - INFO -    - Recipients: 3 email
+2025-06-25 17:09:44,543 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-06-25 17:09:44,543 - ERROR - Error dalam proses report: 'DataProcessor' object has no attribute 'filter_brand_data_by_cycle'
+2025-06-25 17:17:32,771 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 17:17:32,772 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 17:18:00,982 - INFO -    - ZPSDT003 records: 676
+2025-06-25 17:18:00,982 - INFO -    - Brand records: 9797
+2025-06-25 17:18:00,983 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 17:18:00,986 - INFO -    - Ditemukan 1 data yang cocok
+2025-06-25 17:18:00,987 - INFO - 3. Mengambil daftar penerima...
+2025-06-25 17:18:01,106 - INFO -    - Recipients: 3 email
+2025-06-25 17:18:01,107 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-06-25 17:18:01,114 - INFO -    - Ditemukan 3281 brand data
+2025-06-25 17:18:28,105 - INFO -    - Previous week data: 2415 records
+2025-06-25 17:18:28,108 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-06-25 17:18:28,108 - INFO -      Processing REGIONAL 4...
+2025-06-25 17:18:29,059 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:29,847 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:30,172 - INFO -      Processing REGIONAL 1...
+2025-06-25 17:18:31,035 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:31,843 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:32,154 - INFO -      Processing REGIONAL 6...
+2025-06-25 17:18:32,958 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:33,722 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:34,040 - INFO -      Processing REGIONAL 2...
+2025-06-25 17:18:34,847 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:35,653 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:35,885 - INFO -      Processing REGIONAL 3...
+2025-06-25 17:18:36,676 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:37,448 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:37,689 - INFO -      Processing REGIONAL 5...
+2025-06-25 17:18:38,502 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:39,277 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:18:39,486 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-06-25 17:20:43,855 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 17:20:43,855 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 17:21:11,396 - INFO -    - ZPSDT003 records: 676
+2025-06-25 17:21:11,397 - INFO -    - Brand records: 9797
+2025-06-25 17:21:11,398 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 17:21:11,400 - INFO -    - Ditemukan 1 data yang cocok
+2025-06-25 17:21:11,402 - INFO - 3. Mengambil daftar penerima...
+2025-06-25 17:21:11,485 - INFO -    - Recipients: 2 email
+2025-06-25 17:21:11,485 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-06-25 17:21:11,492 - INFO -    - Ditemukan 3281 brand data
+2025-06-25 17:21:38,965 - INFO -    - Previous week data: 2415 records
+2025-06-25 17:21:38,968 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-06-25 17:21:38,968 - INFO -      Processing REGIONAL 4...
+2025-06-25 17:21:39,824 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:40,586 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:40,859 - INFO -      Processing REGIONAL 1...
+2025-06-25 17:21:41,663 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:42,447 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:42,725 - INFO -      Processing REGIONAL 6...
+2025-06-25 17:21:43,517 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:44,285 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:44,583 - INFO -      Processing REGIONAL 2...
+2025-06-25 17:21:45,473 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:46,314 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:46,569 - INFO -      Processing REGIONAL 3...
+2025-06-25 17:21:47,440 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:48,204 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:48,493 - INFO -      Processing REGIONAL 5...
+2025-06-25 17:21:49,361 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:50,110 - ERROR - Telegram API error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:21:50,385 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-06-25 17:29:53,974 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 17:29:54,748 - ERROR - Chat not accessible: {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 17:29:54,749 - ERROR - Possible solutions:
+2025-06-25 17:29:54,750 - ERROR - 1. Make sure the bot is added to the group/channel
+2025-06-25 17:29:54,750 - ERROR - 2. Send /start to the bot if it's a private chat
+2025-06-25 17:29:54,751 - ERROR - 3. Check if TELEGRAM_CHAT_ID is correct
+2025-06-25 17:29:54,752 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 17:29:54,752 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 17:30:22,845 - INFO -    - ZPSDT003 records: 676
+2025-06-25 17:30:22,845 - INFO -    - Brand records: 9797
+2025-06-25 17:30:22,846 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 17:30:22,848 - INFO -    - Ditemukan 1 data yang cocok
+2025-06-25 17:30:22,848 - INFO - 3. Mengambil daftar penerima...
+2025-06-25 17:30:22,934 - INFO -    - Recipients: 2 email
+2025-06-25 17:30:22,934 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-06-25 17:30:22,940 - INFO -    - Ditemukan 3281 brand data
+2025-06-25 17:30:49,863 - INFO -    - Previous week data: 2415 records
+2025-06-25 17:30:49,866 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-06-25 17:30:49,866 - INFO -      Processing REGIONAL 4...
+2025-06-25 17:30:49,882 - ERROR -      X Error processing REGIONAL 4: name 'gd_plt_target' is not defined
+2025-06-25 17:30:49,883 - INFO -      Processing REGIONAL 1...
+2025-06-25 17:30:49,896 - ERROR -      X Error processing REGIONAL 1: name 'gd_plt_target' is not defined
+2025-06-25 17:30:49,897 - INFO -      Processing REGIONAL 6...
+2025-06-25 17:30:49,911 - ERROR -      X Error processing REGIONAL 6: name 'gd_plt_target' is not defined
+2025-06-25 17:30:49,912 - INFO -      Processing REGIONAL 2...
+2025-06-25 17:30:49,926 - ERROR -      X Error processing REGIONAL 2: name 'gd_plt_target' is not defined
+2025-06-25 17:30:49,927 - INFO -      Processing REGIONAL 3...
+2025-06-25 17:30:49,943 - ERROR -      X Error processing REGIONAL 3: name 'gd_plt_target' is not defined
+2025-06-25 17:30:49,943 - INFO -      Processing REGIONAL 5...
+2025-06-25 17:30:49,956 - ERROR -      X Error processing REGIONAL 5: name 'gd_plt_target' is not defined
+2025-06-25 17:30:49,956 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-06-25 20:09:36,177 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 20:09:37,310 - ERROR - Chat not accessible: {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:09:37,311 - ERROR - Possible solutions:
+2025-06-25 20:09:37,311 - ERROR - 1. Make sure the bot is added to the group/channel
+2025-06-25 20:09:37,313 - ERROR - 2. Send /start to the bot if it's a private chat
+2025-06-25 20:09:37,313 - ERROR - 3. Check if TELEGRAM_CHAT_ID is correct
+2025-06-25 20:09:37,317 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 20:09:37,318 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 20:09:37,388 - ERROR - Exception loading ZPSDT003 data: HTTPConnectionPool(host='saphana-whd.wismilak.com', port=8010): Max retries exceeded with url: /sap/opu/odata/sap/ZCDSV_ZPSDT003_CDS/ZCDSV_ZPSDT003?$format=json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000028B2B376910>: Failed to resolve 'saphana-whd.wismilak.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-25 20:09:37,681 - ERROR - Exception loading brand data: HTTPSConnectionPool(host='saphana-whp.wismilak.com', port=53000): Max retries exceeded with url: /sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_CDS/ZCDSV_SD_RMWEEKLY_SUM(p_date=datetime'2025-06-21T00:00:00',p_target_unit='BOX')/Set?sap-client=350&$format=json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000028B2B380290>: Failed to resolve 'saphana-whp.wismilak.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-25 20:09:37,682 - INFO -    - ZPSDT003 records: 0
+2025-06-25 20:09:37,683 - INFO -    - Brand records: 0
+2025-06-25 20:09:37,683 - ERROR - Data SAP tidak lengkap, menghentikan proses
+2025-06-25 20:11:24,271 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 20:11:25,175 - ERROR - Chat not accessible: {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:11:25,176 - ERROR - Possible solutions:
+2025-06-25 20:11:25,177 - ERROR - 1. Make sure the bot is added to the group/channel
+2025-06-25 20:11:25,177 - ERROR - 2. Send /start to the bot if it's a private chat
+2025-06-25 20:11:25,178 - ERROR - 3. Check if TELEGRAM_CHAT_ID is correct
+2025-06-25 20:11:25,178 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 20:11:25,179 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 20:11:25,692 - ERROR - ZPSDT003 API error: 401
+2025-06-25 20:11:52,187 - INFO -    - ZPSDT003 records: 0
+2025-06-25 20:11:52,188 - INFO -    - Brand records: 9797
+2025-06-25 20:11:52,192 - ERROR - Data SAP tidak lengkap, menghentikan proses
+2025-06-25 20:13:18,219 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 20:13:19,264 - ERROR - Chat not accessible: {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:13:19,265 - ERROR - Possible solutions:
+2025-06-25 20:13:19,265 - ERROR - 1. Make sure the bot is added to the group/channel
+2025-06-25 20:13:19,266 - ERROR - 2. Send /start to the bot if it's a private chat
+2025-06-25 20:13:19,267 - ERROR - 3. Check if TELEGRAM_CHAT_ID is correct
+2025-06-25 20:13:19,268 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 20:13:19,268 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 20:13:19,565 - ERROR - ZPSDT003 API error: 401
+2025-06-25 20:13:45,792 - INFO -    - ZPSDT003 records: 0
+2025-06-25 20:13:45,793 - INFO -    - Brand records: 9797
+2025-06-25 20:13:45,794 - ERROR - Data SAP tidak lengkap, menghentikan proses
+2025-06-25 20:15:32,019 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 20:15:33,135 - ERROR - Chat not accessible: {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:15:33,136 - ERROR - Possible solutions:
+2025-06-25 20:15:33,137 - ERROR - 1. Make sure the bot is added to the group/channel
+2025-06-25 20:15:33,137 - ERROR - 2. Send /start to the bot if it's a private chat
+2025-06-25 20:15:33,138 - ERROR - 3. Check if TELEGRAM_CHAT_ID is correct
+2025-06-25 20:15:33,139 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 20:15:33,140 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 20:15:59,643 - INFO -    - ZPSDT003 records: 676
+2025-06-25 20:15:59,643 - INFO -    - Brand records: 9797
+2025-06-25 20:15:59,645 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 20:15:59,662 - INFO -    - Ditemukan 1 data yang cocok
+2025-06-25 20:15:59,662 - INFO - 3. Mengambil daftar penerima...
+2025-06-25 20:15:59,912 - INFO -    - Recipients: 2 email
+2025-06-25 20:15:59,913 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-06-25 20:15:59,920 - INFO -    - Ditemukan 3281 brand data
+2025-06-25 20:15:59,949 - ERROR - Exception loading previous week data: HTTPSConnectionPool(host='saphana-whp.wismilak.com', port=53000): Max retries exceeded with url: /sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_CDS/ZCDSV_SD_RMWEEKLY_SUM(p_date=datetime'2025-06-14T00:00:00',p_target_unit='BOX')/Set?sap-client=350&$format=json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000241E3DF7CD0>: Failed to resolve 'saphana-whp.wismilak.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-25 20:15:59,950 - INFO -    - Previous week data: 0 records
+2025-06-25 20:15:59,955 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-06-25 20:15:59,955 - INFO -      Processing REGIONAL 4...
+2025-06-25 20:16:01,247 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:01,248 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:02,329 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:02,329 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:13,622 - ERROR -      X REGIONAL 4 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:16:13,623 - INFO -      Processing REGIONAL 1...
+2025-06-25 20:16:14,581 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:14,582 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:15,584 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:15,585 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:16,738 - ERROR -      X REGIONAL 1 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:16:16,739 - INFO -      Processing REGIONAL 6...
+2025-06-25 20:16:19,065 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:19,066 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:20,175 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:20,176 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:29,068 - ERROR -      X REGIONAL 6 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:16:29,069 - INFO -      Processing REGIONAL 2...
+2025-06-25 20:16:30,320 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:30,321 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:31,306 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:31,307 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:31,896 - ERROR -      X REGIONAL 2 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:16:31,896 - INFO -      Processing REGIONAL 3...
+2025-06-25 20:16:32,945 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:32,945 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:34,050 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:34,051 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:45,319 - ERROR -      X REGIONAL 3 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:16:45,320 - INFO -      Processing REGIONAL 5...
+2025-06-25 20:16:46,294 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:46,296 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:47,608 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:16:47,609 - ERROR - SOLUTION: Add the bot to the chat or check TELEGRAM_CHAT_ID
+2025-06-25 20:16:48,464 - ERROR -      X REGIONAL 5 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:16:48,465 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-06-25 20:22:44,461 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 20:22:46,466 - ERROR - Chat not accessible: {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-06-25 20:22:46,468 - ERROR - Possible solutions:
+2025-06-25 20:22:46,468 - ERROR - 1. Make sure the bot is added to the group/channel
+2025-06-25 20:22:46,469 - ERROR - 2. Send /start to the bot if it's a private chat
+2025-06-25 20:22:46,469 - ERROR - 3. Check if TELEGRAM_CHAT_ID is correct
+2025-06-25 20:22:46,471 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 20:22:46,471 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 20:27:02,270 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 20:27:03,472 - INFO - Chat accessible: Testing
+2025-06-25 20:27:03,473 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 20:27:03,474 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 20:27:29,828 - INFO -    - ZPSDT003 records: 676
+2025-06-25 20:27:29,830 - INFO -    - Brand records: 9797
+2025-06-25 20:27:29,831 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 20:27:29,836 - INFO -    - Ditemukan 1 data yang cocok
+2025-06-25 20:27:29,836 - INFO - 3. Mengambil daftar penerima...
+2025-06-25 20:27:29,985 - INFO -    - Recipients: 2 email
+2025-06-25 20:27:29,986 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-06-25 20:27:29,995 - INFO -    - Ditemukan 3281 brand data
+2025-06-25 20:27:30,003 - ERROR - Exception loading previous week data: HTTPSConnectionPool(host='saphana-whp.wismilak.com', port=53000): Max retries exceeded with url: /sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_CDS/ZCDSV_SD_RMWEEKLY_SUM(p_date=datetime'2025-06-14T00:00:00',p_target_unit='BOX')/Set?sap-client=350&$format=json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001C69EABE710>: Failed to resolve 'saphana-whp.wismilak.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-25 20:27:30,003 - INFO -    - Previous week data: 0 records
+2025-06-25 20:27:30,007 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-06-25 20:27:30,009 - INFO -      Processing REGIONAL 4...
+2025-06-25 20:27:30,969 - INFO - Telegram message sent successfully
+2025-06-25 20:27:31,026 - ERROR - Error sending Telegram message: maximum recursion depth exceeded while calling a Python object
+2025-06-25 20:27:31,972 - INFO - Telegram message sent successfully
+2025-06-25 20:27:42,623 - ERROR -      X REGIONAL 4 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:27:42,624 - INFO -      Processing REGIONAL 1...
+2025-06-25 20:27:43,511 - INFO - Telegram message sent successfully
+2025-06-25 20:27:44,707 - INFO - Telegram message sent successfully
+2025-06-25 20:27:45,546 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-06-25 20:27:45,546 - INFO -         - Existing: 5,276.1 BOX
+2025-06-25 20:27:45,546 - INFO -         - New Brand: 357.3 BOX
+2025-06-25 20:27:45,547 - INFO -         - Achievement: 0.0%
+2025-06-25 20:27:45,547 - INFO -      Processing REGIONAL 6...
+2025-06-25 20:27:46,785 - INFO - Telegram message sent successfully
+2025-06-25 20:27:47,929 - INFO - Telegram message sent successfully
+2025-06-25 20:27:48,558 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-06-25 20:27:48,560 - INFO -         - Existing: 18,609.9 BOX
+2025-06-25 20:27:48,561 - INFO -         - New Brand: 3,929.5 BOX
+2025-06-25 20:27:48,562 - INFO -         - Achievement: 0.0%
+2025-06-25 20:27:48,562 - INFO -      Processing REGIONAL 2...
+2025-06-25 20:27:49,442 - INFO - Telegram message sent successfully
+2025-06-25 20:27:50,497 - INFO - Telegram message sent successfully
+2025-06-25 20:27:51,640 - INFO - Telegram message sent successfully
+2025-06-25 20:28:02,409 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-06-25 20:28:02,410 - INFO -         - Existing: 17,796.8 BOX
+2025-06-25 20:28:02,411 - INFO -         - New Brand: 4,986.5 BOX
+2025-06-25 20:28:02,411 - INFO -         - Achievement: 0.0%
+2025-06-25 20:28:02,411 - INFO -         - Notes: Ada
+2025-06-25 20:28:02,412 - INFO -      Processing REGIONAL 3...
+2025-06-25 20:28:05,097 - INFO - Telegram message sent successfully
+2025-06-25 20:28:06,102 - INFO - Telegram message sent successfully
+2025-06-25 20:28:07,014 - INFO - Telegram message sent successfully
+2025-06-25 20:28:07,825 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-06-25 20:28:07,826 - INFO -         - Existing: 13,801.9 BOX
+2025-06-25 20:28:07,826 - INFO -         - New Brand: 13,294.7 BOX
+2025-06-25 20:28:07,828 - INFO -         - Achievement: 0.0%
+2025-06-25 20:28:07,828 - INFO -      Processing REGIONAL 5...
+2025-06-25 20:28:08,804 - INFO - Telegram message sent successfully
+2025-06-25 20:28:10,007 - INFO - Telegram message sent successfully
+2025-06-25 20:28:19,465 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-06-25 20:28:19,466 - INFO -         - Existing: 1,130.7 BOX
+2025-06-25 20:28:19,466 - INFO -         - New Brand: 128.4 BOX
+2025-06-25 20:28:19,496 - INFO -         - Achievement: 0.0%
+2025-06-25 20:28:19,497 - INFO - === Proses selesai. Total laporan berhasil dikirim: 5 ===
+2025-06-25 20:28:46,438 - INFO - Bot connected: @SAPSupportbot
+2025-06-25 20:28:47,486 - INFO - Chat accessible: Testing
+2025-06-25 20:28:47,487 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-06-25 20:28:47,488 - INFO - 1. Mengambil data dari SAP...
+2025-06-25 20:29:15,274 - INFO -    - ZPSDT003 records: 676
+2025-06-25 20:29:15,274 - INFO -    - Brand records: 9797
+2025-06-25 20:29:15,275 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-06-25 20:29:15,279 - INFO -    - Ditemukan 1 data yang cocok
+2025-06-25 20:29:15,279 - INFO - 3. Mengambil daftar penerima...
+2025-06-25 20:29:15,386 - INFO -    - Recipients: 2 email
+2025-06-25 20:29:15,387 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-06-25 20:29:15,395 - INFO -    - Ditemukan 3281 brand data
+2025-06-25 20:29:15,455 - ERROR - Exception loading previous week data: HTTPSConnectionPool(host='saphana-whp.wismilak.com', port=53000): Max retries exceeded with url: /sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_CDS/ZCDSV_SD_RMWEEKLY_SUM(p_date=datetime'2025-06-14T00:00:00',p_target_unit='BOX')/Set?sap-client=350&$format=json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D8B3A97BD0>: Failed to resolve 'saphana-whp.wismilak.com' ([Errno 11001] getaddrinfo failed)"))
+2025-06-25 20:29:15,456 - INFO -    - Previous week data: 0 records
+2025-06-25 20:29:15,460 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-06-25 20:29:15,461 - INFO -      Processing REGIONAL 4...
+2025-06-25 20:29:16,598 - INFO - Telegram message sent successfully
+2025-06-25 20:29:16,628 - ERROR - Error sending Telegram message: maximum recursion depth exceeded while calling a Python object
+2025-06-25 20:29:17,846 - INFO - Telegram message sent successfully
+2025-06-25 20:29:26,245 - ERROR -      X REGIONAL 4 - Gagal kirim (Telegram: False, Email: True)
+2025-06-25 20:29:26,246 - INFO -      Processing REGIONAL 1...
+2025-06-25 20:29:27,317 - INFO - Telegram message sent successfully
+2025-06-25 20:29:28,382 - INFO - Telegram message sent successfully
+2025-06-25 20:29:29,129 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-06-25 20:29:29,130 - INFO -         - Existing: 5,276.1 BOX
+2025-06-25 20:29:29,131 - INFO -         - New Brand: 357.3 BOX
+2025-06-25 20:29:29,131 - INFO -         - Achievement: 0.0%
+2025-06-25 20:29:29,131 - INFO -      Processing REGIONAL 6...
+2025-06-25 20:29:30,297 - INFO - Telegram message sent successfully
+2025-06-25 20:29:31,997 - INFO - Telegram message sent successfully
+2025-06-25 20:29:42,776 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-06-25 20:29:42,777 - INFO -         - Existing: 18,609.9 BOX
+2025-06-25 20:29:42,777 - INFO -         - New Brand: 3,929.5 BOX
+2025-06-25 20:29:42,778 - INFO -         - Achievement: 0.0%
+2025-06-25 20:29:42,778 - INFO -      Processing REGIONAL 2...
+2025-06-25 20:29:43,843 - INFO - Telegram message sent successfully
+2025-06-25 20:29:44,742 - INFO - Telegram message sent successfully
+2025-06-25 20:29:45,847 - INFO - Telegram message sent successfully
+2025-06-25 20:29:46,567 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-06-25 20:29:46,568 - INFO -         - Existing: 17,796.8 BOX
+2025-06-25 20:29:46,568 - INFO -         - New Brand: 4,986.5 BOX
+2025-06-25 20:29:46,568 - INFO -         - Achievement: 0.0%
+2025-06-25 20:29:46,569 - INFO -         - Notes: Ada
+2025-06-25 20:29:46,570 - INFO -      Processing REGIONAL 3...
+2025-06-25 20:29:47,654 - INFO - Telegram message sent successfully
+2025-06-25 20:29:48,764 - INFO - Telegram message sent successfully
+2025-06-25 20:29:49,742 - INFO - Telegram message sent successfully
+2025-06-25 20:29:59,694 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-06-25 20:29:59,695 - INFO -         - Existing: 13,801.9 BOX
+2025-06-25 20:29:59,695 - INFO -         - New Brand: 13,294.7 BOX
+2025-06-25 20:29:59,696 - INFO -         - Achievement: 0.0%
+2025-06-25 20:29:59,696 - INFO -      Processing REGIONAL 5...
+2025-06-25 20:30:00,991 - INFO - Telegram message sent successfully
+2025-06-25 20:30:02,016 - INFO - Telegram message sent successfully
+2025-06-25 20:30:02,726 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-06-25 20:30:02,728 - INFO -         - Existing: 1,130.7 BOX
+2025-06-25 20:30:02,728 - INFO -         - New Brand: 128.4 BOX
+2025-06-25 20:30:02,729 - INFO -         - Achievement: 0.0%
+2025-06-25 20:30:02,729 - INFO - === Proses selesai. Total laporan berhasil dikirim: 5 ===
