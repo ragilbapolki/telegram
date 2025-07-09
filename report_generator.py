@@ -37,11 +37,11 @@ class ReportGenerator:
     
     def group_brand_data_by_region(self, brand_data_list):
         """
-        Group brand data by name_reg (regional)
+        Group brand data by regional_desc (regional)
         """
         grouped = {}
         for brand in brand_data_list:
-            region = brand.get('name_reg', 'Unknown Region')
+            region = brand.get('regional_desc', 'Unknown Region')
             if region not in grouped:
                 grouped[region] = []
             grouped[region].append(brand)
@@ -51,50 +51,50 @@ class ReportGenerator:
         """
         Calculate summary for specific regional with new format
         """
-        # Filter data that is not prctr 3998 (Existing Brand)
-        existing_data = [item for item in regional_data if item.get('prctr') != '3998']
+        # Filter data that is not prctr_base 0000003998 (Existing Brand)
+        existing_data = [item for item in regional_data if item.get('prctr_base') != '0000003998']
         
-        # Filter data only prctr 3998 (New Brand)
-        new_brand_data = [item for item in regional_data if item.get('prctr') == '3998']
+        # Filter data only prctr_base_base 0000003998 (New Brand)
+        new_brand_data = [item for item in regional_data if item.get('prctr_base') == '0000003998']
         
         # Current week sales - Existing
-        current_week_sales_existing = sum([float(item.get('total_qty_billing', 0)) for item in existing_data])
+        current_week_sales_existing = sum([float(item.get('qty_billing_sum', 0)) for item in existing_data])
         
-        # Current week sales - New Brand (3998)
-        current_week_sales_new = sum([float(item.get('total_qty_billing', 0)) for item in new_brand_data])
+        # Current week sales - New Brand (0000003998)
+        current_week_sales_new = sum([float(item.get('qty_billing_sum', 0)) for item in new_brand_data])
         
         # Total sales from week 1 to current week (simulation - in practice needs separate query)
         total_w1_to_current_existing = current_week_sales_existing * current_week
         
         # Total target from week 1 to current week - Existing
-        total_target_w1_to_current_existing = sum([float(item.get('total_target', 0)) for item in existing_data]) * current_week
+        qty_target_ae_w1_to_current_existing = sum([float(item.get('qty_target_ae', 0)) for item in existing_data]) * current_week
         
         # Calculate achievement percentage - Existing
-        achievement_pct_existing = (total_w1_to_current_existing / total_target_w1_to_current_existing * 100) if total_target_w1_to_current_existing > 0 else 0
+        achievement_pct_existing = (total_w1_to_current_existing / qty_target_ae_w1_to_current_existing * 100) if qty_target_ae_w1_to_current_existing > 0 else 0
         
         # Calculate ideal omset percentage (current_week / total_weeks_in_cycle)
         omset_ideal_pct = (current_week / total_weeks_in_cycle * 100) if total_weeks_in_cycle > 0 else 0
         
         # Calculate GD category data
         gd_data = [item for item in existing_data if item.get('category1') == 'GD']
-        gd_current_sales = sum([float(item.get('total_qty_billing', 0)) for item in gd_data])
-        gd_total_target = sum([float(item.get('total_target', 0)) for item in gd_data]) * current_week
-        gd_achievement_pct = (gd_current_sales * current_week / gd_total_target * 100) if gd_total_target > 0 else 0
+        gd_current_sales = sum([float(item.get('qty_billing_sum', 0)) for item in gd_data])
+        gd_qty_target_ae= sum([float(item.get('qty_target_ae', 0)) for item in gd_data]) * current_week
+        gd_achievement_pct = (gd_current_sales * current_week / gd_qty_target_ae* 100) if gd_qty_target_ae> 0 else 0
         
         # Calculate GD + PLT category data
         gd_plt_data = [item for item in existing_data if item.get('category1') in ['GD', 'PLT']]
-        gd_plt_current_sales = sum([float(item.get('total_qty_billing', 0)) for item in gd_plt_data])
-        gd_plt_total_target = sum([float(item.get('total_target', 0)) for item in gd_plt_data]) * current_week
-        gd_plt_achievement_pct = (gd_plt_current_sales * current_week / gd_plt_total_target * 100) if gd_plt_total_target > 0 else 0
+        gd_plt_current_sales = sum([float(item.get('qty_billing_sum', 0)) for item in gd_plt_data])
+        gd_plt_qty_target_ae= sum([float(item.get('qty_target_ae', 0)) for item in gd_plt_data]) * current_week
+        gd_plt_achievement_pct = (gd_plt_current_sales * current_week / gd_plt_qty_target_ae* 100) if gd_plt_qty_target_ae> 0 else 0
         
-        # Total EVO (all data including 3998)
-        total_current_sales = sum([float(item.get('total_qty_billing', 0)) for item in regional_data])
+        # Total EVO (all data including 0000003998)
+        total_current_sales = sum([float(item.get('qty_billing_sum', 0)) for item in regional_data])
         
         return {
             'current_week_sales_existing': current_week_sales_existing,
             'current_week_sales_new': current_week_sales_new,
             'total_w1_to_current_existing': total_w1_to_current_existing,
-            'total_target_w1_to_current_existing': total_target_w1_to_current_existing,
+            'qty_target_ae_w1_to_current_existing': qty_target_ae_w1_to_current_existing,
             'achievement_pct_existing': achievement_pct_existing,
             'omset_ideal_pct': omset_ideal_pct,
             'gd_current_sales': gd_current_sales,
@@ -155,15 +155,15 @@ class ReportGenerator:
                 </div>
             </div>
             <div class="section">
-                <h4>📈 Existing Brand (selain 3998):</h4>
+                <h4>📈 Existing Brand (selain 0000003998):</h4>
         """
-        existing_brands_with_qty = [item for item in summary_data['existing_data'] if float(item.get('total_qty_billing', 0)) > 0]
+        existing_brands_with_qty = [item for item in summary_data['existing_data'] if float(item.get('qty_billing_sum', 0)) > 0]
         if existing_brands_with_qty:
             for item in existing_brands_with_qty:
-                achievement_pct = (float(item.get('total_qty_billing', 0)) / float(item.get('total_target', 0)) * 100) if float(item.get('total_target', 0)) > 0 else 0
+                achievement_pct = (float(item.get('qty_billing_sum', 0)) / float(item.get('qty_target_ae', 0)) * 100) if float(item.get('qty_target_ae', 0)) > 0 else 0
                 html_body += f"""
                     <div class="highlight">
-                        {item.get('matnr', 'N/A')} ({item.get('wgbez60', 'N/A')}) : {float(item.get('total_qty_billing', 0)):,.3f} box ({achievement_pct:.3f}%) Vs AE
+                        {item.get('matnr', 'N/A')} ({item.get('matkl_desc', 'N/A')}) : {float(item.get('qty_billing_sum', 0)):,.3f} box ({achievement_pct:.3f}%) Vs AE
                     </div>
                 """
         else:
@@ -174,13 +174,13 @@ class ReportGenerator:
             """
         has_both_types = len(summary_data['existing_data']) > 0 and len(summary_data['new_brand_data']) > 0
         if has_both_types:
-            sales_offices = list(set([item.get('sales_office_name', 'N/A') for item in regional_data]))
+            vkbur_descs = list(set([item.get('vkbur_desc', 'N/A') for item in regional_data]))
             html_body += f"""
-            <h4 class="total-evo">🔄 TOTAL EVO (semua termasuk 3998):</h4>
+            <h4 class="total-evo">🔄 TOTAL EVO (semua termasuk 0000003998):</h4>
             """
-            for office in sales_offices:
-                office_data = [item for item in regional_data if item.get('sales_office_name') == office]
-                current_week_total = sum([float(item.get('total_qty_billing', 0)) for item in office_data])
+            for office in vkbur_descs:
+                office_data = [item for item in regional_data if item.get('vkbur_desc') == office]
+                current_week_total = sum([float(item.get('qty_billing_sum', 0)) for item in office_data])
                 last_week_total = current_week_total * 1.12  # Asumsi week lalu 12% lebih tinggi
                 difference = current_week_total - last_week_total
                 html_body += f"""
@@ -188,16 +188,16 @@ class ReportGenerator:
                     {office} : {current_week_total:.3f} / {last_week_total:.3f} / {difference:.3f}
                 </div>
                 """
-        new_brands_with_qty = [item for item in summary_data['new_brand_data'] if float(item.get('total_qty_billing', 0)) > 0]
+        new_brands_with_qty = [item for item in summary_data['new_brand_data'] if float(item.get('qty_billing_sum', 0)) > 0]
         if new_brands_with_qty:
             html_body += f"""
-            <h4 class="new-brand">🆕 NEW BRAND (hanya 3998):</h4>
+            <h4 class="new-brand">🆕 NEW BRAND (hanya 0000003998):</h4>
             """
             for item in new_brands_with_qty:
-                achievement_pct = (float(item.get('total_qty_billing', 0)) / float(item.get('total_target', 0)) * 100) if float(item.get('total_target', 0)) > 0 else 0
+                achievement_pct = (float(item.get('qty_billing_sum', 0)) / float(item.get('qty_target_ae', 0)) * 100) if float(item.get('qty_target_ae', 0)) > 0 else 0
                 html_body += f"""
                 <div class="highlight">
-                    {item.get('matnr', 'N/A')} ({item.get('wgbez60', 'N/A')}) : {float(item.get('total_qty_billing', 0)):,.3f} box ({achievement_pct:.3f}%) Vs AE
+                    {item.get('matnr', 'N/A')} ({item.get('matkl_desc', 'N/A')}) : {float(item.get('qty_billing_sum', 0)):,.3f} box ({achievement_pct:.3f}%) Vs AE
                 </div>
                 """
         html_body += """
@@ -285,7 +285,7 @@ class ReportGenerator:
             if matching_brands:
                 print(f"Ditemukan {len(matching_brands)} brand data untuk Cycle {cycle}, Year {cycle_year}")
                 
-                # Group by region (name_reg)
+                # Group by region (regional_desc)
                 regional_groups = self.group_brand_data_by_region(matching_brands)
                 
                 print(f"Data dikelompokkan menjadi {len(regional_groups)} regional:")
@@ -296,38 +296,38 @@ class ReportGenerator:
                 for region_name, regional_data in regional_groups.items():
                     print(f"\nMemproses regional: {region_name}")
                     
-                    # Debug: Print semua field yang tersedia untuk mapping regional_id
+                    # Debug: Print semua field yang tersedia untuk mapping vkbur
                     if regional_data:
                         sample_data = regional_data[0]
                         print(f"DEBUG - Sample data fields: {list(sample_data.keys())}")
-                        print(f"DEBUG - Possible regional_id fields:")
+                        print(f"DEBUG - Possible vkbur fields:")
                         for key, value in sample_data.items():
                             if any(keyword in key.lower() for keyword in ['reg', 'region', 'office', 'vstel', 'kunnr']):
                                 print(f"  {key}: {value}")
                     
-                    # Coba beberapa kemungkinan mapping untuk regional_id
-                    possible_regional_ids = []
+                    # Coba beberapa kemungkinan mapping untuk vkbur
+                    possible_vkburs = []
                     if regional_data:
                         data_sample = regional_data[0]
-                        possible_regional_ids.extend([
+                        possible_vkburs.extend([
                             data_sample.get('vstel', ''),
-                            data_sample.get('sales_office', ''),
-                            data_sample.get('regional_id', ''),
+                            data_sample.get('vkbur_desc', ''),
+                            data_sample.get('vkbur', ''),
                             data_sample.get('kunnr', ''),
-                            data_sample.get('name_reg', ''),
+                            data_sample.get('regional_desc', ''),
                             # Tambahkan field lain yang mungkin
                         ])
                     
                     # Filter yang tidak kosong
-                    possible_regional_ids = [rid for rid in possible_regional_ids if rid]
+                    possible_vkburs = [rid for rid in possible_vkburs if rid]
                     
                     regional_notes = None
-                    # Coba setiap kemungkinan regional_id
-                    for regional_id in possible_regional_ids:
-                        print(f"DEBUG - Mencoba regional_id: '{regional_id}'")
-                        regional_notes = self.get_regional_notes(regional_id, cycle, current_week, cycle_year)
+                    # Coba setiap kemungkinan vkbur
+                    for vkbur in possible_vkburs:
+                        print(f"DEBUG - Mencoba vkbur: '{vkbur}'")
+                        regional_notes = self.get_regional_notes(vkbur, cycle, current_week, cycle_year)
                         if regional_notes:
-                            print(f"DEBUG - Notes ditemukan dengan regional_id: '{regional_id}'")
+                            print(f"DEBUG - Notes ditemukan dengan vkbur: '{vkbur}'")
                             break
                     
                     if not regional_notes:

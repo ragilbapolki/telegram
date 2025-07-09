@@ -86,7 +86,7 @@ class SAPService:
             previous_date_str = previous_date.strftime('%Y-%m-%d')
             
             # URL untuk data week lalu
-            sap_api_url_previous = f"https://saphana-whp.wismilak.com:53000/sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_CDS/ZCDSV_SD_RMWEEKLY_SUM(p_date=datetime'{previous_date_str}T00:00:00',p_target_unit='{SATUAN}')/Set?sap-client=350&$format=json"
+            sap_api_url_previous = f"https://gajahmada.wismilak.com/sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_AE_CDS/ZCDSV_SD_RMWEEKLY_SUM_AE(p_date=datetime'{previous_date_str}T00:00:00',p_target_unit='{SATUAN}')/Set?$format=json"
             
             auth = (SAP_USERNAME, SAP_PASSWORD)
             headers = {

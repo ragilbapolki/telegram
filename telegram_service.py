@@ -151,14 +151,6 @@ class TelegramService:
         Mengirim ringkasan singkat ke Telegram
         """
         summary_message = f"""
-🏢 *{region_name}* - Cycle {cycle} Week {week}
-📊 *Summary:*
-• Existing Brand: {summary_data['current_week_sales_existing']:,.1f} BOX
-• New Brand: {summary_data['current_week_sales_new']:,.1f} BOX
-• Achievement: {summary_data['achievement_pct_existing']:.1f}%
-🎯 *GD Performance:*
-• GD Achievement: {summary_data['gd_achievement_pct']:.1f}%
-• GD+PLT Achievement: {summary_data['gd_plt_achievement_pct']:.1f}%
         """
        
         return self.send_message(summary_message)

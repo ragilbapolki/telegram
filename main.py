@@ -2,13 +2,14 @@
 # Updated main.py logging configuration to handle Unicode
 import logging
 from datetime import datetime
-from config import CURRENT_DATE, SATUAN
+from config import CURRENT_DATE, SATUAN, REPORT_CONFIG
 from sap_service import SAPService
 from database_service import DatabaseService
 from data_processor import DataProcessor
 from report_formatter import ReportFormatter
 from email_service import EmailService
 from telegram_service import TelegramService
+from whatsapp_service import WhatsAppService
 import sys
 import os
 
@@ -36,6 +37,7 @@ class ReportApp:
         self.report_formatter = ReportFormatter()
         self.email_service = EmailService()
         self.telegram_service = TelegramService()
+        self.whatsapp_service = WhatsAppService()
         
     def run_report(self):
         """
@@ -107,7 +109,7 @@ class ReportApp:
                 # Group by region
                 regional_groups = {}
                 for brand in matching_brands:
-                    region = brand.get('name_reg', 'Unknown Region')
+                    region = brand.get('regional_desc', 'Unknown Region')
                     if region not in regional_groups:
                         regional_groups[region] = []
                     regional_groups[region].append(brand)
@@ -141,15 +143,15 @@ class ReportApp:
         try:
             logging.info(f"     Processing {region_name}...")
             
-            # Cari regional_id untuk notes
-            regional_id = self._find_best_regional_id(regional_data)
+            # Cari vkbur untuk notes
+            vkbur = self._find_best_vkbur(regional_data)
             
             # Ambil notes dari database
             regional_notes = None
-            if regional_id:
+            if vkbur:
                 cycle = zpsdt_data['cycle']
                 cycle_year = zpsdt_data['cycle_year']
-                regional_notes = self.db_service.get_regional_notes(regional_id, cycle, current_week, cycle_year)
+                # regional_notes = self.db_service.get_regional_notes(vkbur, cycle, current_week, cycle_year)
             
             # Hitung summary
             summary_data = self._calculate_regional_summary(regional_data, current_week, 4)
@@ -162,6 +164,11 @@ class ReportApp:
             email_body = self.report_formatter.format_email_body(
                 region_name, zpsdt_data, regional_data, summary_data, previous_week_data, regional_notes
             )
+
+            # Format laporan
+            whatsapp_message = self.report_formatter.format_whatsapp_message(
+                region_name, zpsdt_data, regional_data, summary_data, previous_week_data, regional_notes
+            )
             
             # Subject
             cycle = zpsdt_data['cycle']
@@ -170,6 +177,9 @@ class ReportApp:
             # Kirim ke Telegram
             telegram_success = self.telegram_service.send_message(telegram_message)
             
+            # Kirim ke Whatsapp
+            whatsapp_success = self.whatsapp_service.send_regional_report(whatsapp_message)
+
             # Kirim summary ke Telegram juga
             summary_msg = self.report_formatter.format_summary_message(region_name, summary_data, cycle, current_week)
             self.telegram_service.send_summary_message(region_name, summary_data, cycle, current_week)
@@ -178,7 +188,7 @@ class ReportApp:
             email_success = self.email_service.send_email(recipient_emails, subject, email_body)
             
             # Log hasil - using safe characters for Windows console
-            if telegram_success and email_success:
+            if telegram_success and email_success and whatsapp_success:
                 logging.info(f"     ✓ {region_name} - Berhasil kirim Telegram & Email")
                 logging.info(f"        - Existing: {summary_data['current_week_sales_existing']:,.1f} BOX")
                 logging.info(f"        - New Brand: {summary_data['current_week_sales_new']:,.1f} BOX")
@@ -203,20 +213,20 @@ class ReportApp:
             return datetime.fromtimestamp(timestamp / 1000)
         return None
     
-    def _find_best_regional_id(self, regional_data):
+    def _find_best_vkbur(self, regional_data):
         """
-        Mencari regional_id yang paling tepat dari data yang tersedia
+        Mencari vkbur yang paling tepat dari data yang tersedia
         """
         if not regional_data:
             return None
         
         sample_data = regional_data[0]
         
-        # Prioritas field untuk regional_id
+        # Prioritas field untuk vkbur
         priority_fields = [
             'vstel',           # Sales organization
-            'sales_office',    # Sales office
-            'regional_id',     # Direct regional_id
+            'vkbur_desc',    # Sales office
+            'vkbur',     # Direct vkbur
             'kunnr',          # Customer number
             'vkorg',          # Sales organization
             'vtweg',          # Distribution channel
@@ -225,13 +235,13 @@ class ReportApp:
         # Coba setiap field berdasarkan prioritas
         for field in priority_fields:
             if field in sample_data and sample_data[field]:
-                regional_id = str(sample_data[field]).strip()
-                if regional_id:
-                    return regional_id
+                vkbur = str(sample_data[field]).strip()
+                if vkbur:
+                    return vkbur
         
-        # Jika tidak ada yang cocok, gunakan name_reg sebagai fallback
-        if 'name_reg' in sample_data:
-            return str(sample_data['name_reg'])
+        # Jika tidak ada yang cocok, gunakan regional_desc sebagai fallback
+        if 'regional_desc' in sample_data:
+            return str(sample_data['regional_desc'])
         
         return None
     
@@ -241,38 +251,38 @@ class ReportApp:
         """
         from collections import defaultdict
         
-        existing_data = [item for item in regional_data if item.get('prctr') != '3998']
-        new_brand_data = [item for item in regional_data if item.get('prctr') == '3998']
+        existing_data = [item for item in regional_data if item.get('prctr_base') != '0000003998']
+        new_brand_data = [item for item in regional_data if item.get('prctr_base') == '0000003998']
         
-        # Group existing and new brand data by wgbez60
+        # Group existing and new brand data by matkl_desc
         grouped_existing = self._group_products_by_description(existing_data)
         grouped_new = self._group_products_by_description(new_brand_data)
         
-        current_week_sales_existing = sum([item['total_qty_billing'] for item in grouped_existing])
-        current_week_sales_new = sum([item['total_qty_billing'] for item in grouped_new])
+        current_week_sales_existing = sum([item['qty_billing_sum'] for item in grouped_existing])
+        current_week_sales_new = sum([item['qty_billing_sum'] for item in grouped_new])
         
         total_w1_to_current_existing = current_week_sales_existing * current_week
-        total_target_w1_to_current_existing = sum([item['total_target'] for item in grouped_existing]) * current_week
-        achievement_pct_existing = (total_w1_to_current_existing / total_target_w1_to_current_existing * 100) if total_target_w1_to_current_existing > 0 else 0
+        qty_target_ae_w1_to_current_existing = sum([item['qty_target_ae'] for item in grouped_existing]) * current_week
+        achievement_pct_existing = (total_w1_to_current_existing / qty_target_ae_w1_to_current_existing * 100) if qty_target_ae_w1_to_current_existing > 0 else 0
         omset_ideal_pct = (current_week / total_weeks_in_cycle * 100) if total_weeks_in_cycle > 0 else 0
         
         gd_data = [item for item in grouped_existing if item.get('category1') == 'GD']
-        gd_current_sales = sum([item['total_qty_billing'] for item in gd_data])
-        gd_total_target = sum([item['total_target'] for item in gd_data]) * current_week
-        gd_achievement_pct = (gd_current_sales * current_week / gd_total_target * 100) if gd_total_target > 0 else 0
+        gd_current_sales = sum([item['qty_billing_sum'] for item in gd_data])
+        gd_qty_target_ae= sum([item['qty_target_ae'] for item in gd_data]) * current_week
+        gd_achievement_pct = (gd_current_sales * current_week / gd_qty_target_ae* 100) if gd_qty_target_ae> 0 else 0
         
         gd_plt_data = [item for item in grouped_existing if item.get('category1') in ['GD', 'PLT']]
-        gd_plt_current_sales = sum([item['total_qty_billing'] for item in gd_plt_data])
-        gd_plt_total_target = sum([item['total_target'] for item in gd_plt_data]) * current_week
-        gd_plt_achievement_pct = (gd_plt_current_sales * current_week / gd_plt_total_target * 100) if gd_plt_total_target > 0 else 0
+        gd_plt_current_sales = sum([item['qty_billing_sum'] for item in gd_plt_data])
+        gd_plt_qty_target_ae= sum([item['qty_target_ae'] for item in gd_plt_data]) * current_week
+        gd_plt_achievement_pct = (gd_plt_current_sales * current_week / gd_plt_qty_target_ae* 100) if gd_plt_qty_target_ae> 0 else 0
         
-        total_current_sales = sum([float(item.get('total_qty_billing', 0)) for item in regional_data])
+        total_current_sales = sum([float(item.get('qty_billing_sum', 0)) for item in regional_data])
         
         return {
             'current_week_sales_existing': current_week_sales_existing,
             'current_week_sales_new': current_week_sales_new,
             'total_w1_to_current_existing': total_w1_to_current_existing,
-            'total_target_w1_to_current_existing': total_target_w1_to_current_existing,
+            'qty_target_ae_w1_to_current_existing': qty_target_ae_w1_to_current_existing,
             'achievement_pct_existing': achievement_pct_existing,
             'omset_ideal_pct': omset_ideal_pct,
             'gd_current_sales': gd_current_sales,
@@ -290,30 +300,30 @@ class ReportApp:
     
     def _group_products_by_description(self, product_data):
         """
-        Mengelompokkan produk berdasarkan wgbez60 dan sum total_qty_billing serta total_target
+        Mengelompokkan produk berdasarkan matkl_desc dan sum qty_billing_sum serta qty_target_ae
         """
         from collections import defaultdict
         
         grouped_products = defaultdict(lambda: {
-            'wgbez60': '',
-            'total_qty_billing': 0.0,
-            'total_target': 0.0,
+            'matkl_desc': '',
+            'qty_billing_sum': 0.0,
+            'qty_target_ae': 0.0,
             'category1': '',
-            'prctr': ''
+            'prctr_base': ''
         })
         
         for item in product_data:
-            wgbez60 = item.get('wgbez60', 'Unknown Product')
+            matkl_desc = item.get('matkl_desc', 'Unknown Product')
             
             # Jika belum ada, set basic info
-            if not grouped_products[wgbez60]['wgbez60']:
-                grouped_products[wgbez60]['wgbez60'] = wgbez60
-                grouped_products[wgbez60]['category1'] = item.get('category1', '')
-                grouped_products[wgbez60]['prctr'] = item.get('prctr', '')
+            if not grouped_products[matkl_desc]['matkl_desc']:
+                grouped_products[matkl_desc]['matkl_desc'] = matkl_desc
+                grouped_products[matkl_desc]['category1'] = item.get('category1', '')
+                grouped_products[matkl_desc]['prctr_base'] = item.get('prctr_base', '')
             
             # Sum the values
-            grouped_products[wgbez60]['total_qty_billing'] += float(item.get('total_qty_billing', 0))
-            grouped_products[wgbez60]['total_target'] += float(item.get('total_target', 0))
+            grouped_products[matkl_desc]['qty_billing_sum'] += float(item.get('qty_billing_sum', 0))
+            grouped_products[matkl_desc]['qty_target_ae'] += float(item.get('qty_target_ae', 0))
         
         # Convert back to list
         return list(grouped_products.values())

@@ -41,7 +41,7 @@ class DatabaseManager:
             print(f"Error getting recipients from database: {e}")
             return DEFAULT_RECIPIENTS
     
-    def get_regional_notes(self, regional_id, cycle, week, year):
+    def get_regional_notes(self, vkbur, cycle, week, year):
         """
         Get notes for specific regional from database
         Fixed: Made sure all parameters are properly handled
@@ -51,7 +51,7 @@ class DatabaseManager:
             cursor = connection.cursor()
             
             # Convert parameters to proper types
-            regional_id = str(regional_id) if regional_id else ''
+            vkbur = str(vkbur) if vkbur else ''
             cycle = str(cycle) if cycle else ''
             week = str(week) if week else ''
             year = str(year) if year else ''
@@ -59,17 +59,17 @@ class DatabaseManager:
             query = """
             SELECT note_text, created_at
             FROM note_customers 
-            WHERE regional_id = %s AND cycle = %s AND week = %s AND year = %s
+            WHERE vkbur = %s AND cycle = %s AND week = %s AND year = %s
             AND note_text IS NOT NULL AND note_text != ''
             ORDER BY created_at DESC
             LIMIT 1
             """
             
             # Debug logging
-            logging.info(f"Searching notes for: regional_id={regional_id}, cycle={cycle}, week={week}, year={year}")
-            print(f"Searching notes for: regional_id={regional_id}, cycle={cycle}, week={week}, year={year}")
+            logging.info(f"Searching notes for: vkbur={vkbur}, cycle={cycle}, week={week}, year={year}")
+            print(f"Searching notes for: vkbur={vkbur}, cycle={cycle}, week={week}, year={year}")
             
-            cursor.execute(query, (regional_id, cycle, week, year))
+            cursor.execute(query, (vkbur, cycle, week, year))
             result = cursor.fetchone()
             
             cursor.close()
@@ -81,7 +81,7 @@ class DatabaseManager:
                 print(f"Found note: '{note_text}' created at {created_at}")
                 return note_text
             else:
-                print(f"No notes found for regional_id={regional_id}, cycle={cycle}, week={week}, year={year}")
+                print(f"No notes found for vkbur={vkbur}, cycle={cycle}, week={week}, year={year}")
                 return None
                 
         except Exception as e:
@@ -98,7 +98,7 @@ class DatabaseManager:
             cursor = connection.cursor()
             
             query = """
-            SELECT regional_id, cycle, week, year, note_text, created_at
+            SELECT vkbur, cycle, week, year, note_text, created_at
             FROM note_customers 
             WHERE note_text IS NOT NULL AND note_text != ''
             ORDER BY created_at DESC

@@ -326,3 +326,1548 @@
 2025-06-25 20:30:02,728 - INFO -         - New Brand: 128.4 BOX
 2025-06-25 20:30:02,729 - INFO -         - Achievement: 0.0%
 2025-06-25 20:30:02,729 - INFO - === Proses selesai. Total laporan berhasil dikirim: 5 ===
+2025-07-09 14:42:16,497 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 14:42:17,235 - INFO - Chat accessible: Testing
+2025-07-09 14:42:17,236 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 14:42:17,237 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 14:42:21,644 - INFO -    - ZPSDT003 records: 676
+2025-07-09 14:42:21,645 - INFO -    - Brand records: 21086
+2025-07-09 14:42:21,645 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 14:42:21,648 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 14:42:21,648 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 14:42:21,810 - INFO -    - Recipients: 2 email
+2025-07-09 14:42:21,812 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 14:42:21,824 - INFO -    - Ditemukan 7449 brand data
+2025-07-09 14:42:27,874 - INFO -    - Previous week data: 5436 records
+2025-07-09 14:42:27,878 - INFO -    - Dikelompokkan menjadi 1 regional
+2025-07-09 14:42:27,878 - INFO -      Processing Unknown Region...
+2025-07-09 14:42:28,717 - INFO - Telegram message sent successfully
+2025-07-09 14:42:29,533 - INFO - Telegram message sent successfully
+2025-07-09 14:42:29,892 - INFO -      ✓ Unknown Region - Berhasil kirim Telegram & Email
+2025-07-09 14:42:29,892 - INFO -         - Existing: 0.0 BOX
+2025-07-09 14:42:29,893 - INFO -         - New Brand: 0.0 BOX
+2025-07-09 14:42:29,894 - INFO -         - Achievement: 0.0%
+2025-07-09 14:42:29,896 - INFO - === Proses selesai. Total laporan berhasil dikirim: 1 ===
+2025-07-09 16:50:48,973 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 16:50:49,602 - INFO - Chat accessible: Testing
+2025-07-09 16:50:49,603 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 16:50:49,606 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 16:50:55,693 - INFO -    - ZPSDT003 records: 676
+2025-07-09 16:50:55,694 - INFO -    - Brand records: 21164
+2025-07-09 16:50:55,694 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 16:50:55,698 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 16:50:55,698 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 16:50:55,874 - INFO -    - Recipients: 2 email
+2025-07-09 16:50:55,874 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 16:50:55,891 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 16:51:03,295 - INFO -    - Previous week data: 5436 records
+2025-07-09 16:51:03,303 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 16:51:03,303 - INFO -      Processing REGIONAL 3...
+2025-07-09 16:51:03,325 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:51:04,177 - INFO - Telegram message sent successfully
+2025-07-09 16:51:04,964 - INFO - Telegram message sent successfully
+2025-07-09 16:51:05,256 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 16:51:05,256 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 16:51:05,256 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 16:51:05,257 - INFO -         - Achievement: 0.0%
+2025-07-09 16:51:05,257 - INFO -      Processing REGIONAL 4...
+2025-07-09 16:51:05,270 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:51:06,215 - INFO - Telegram message sent successfully
+2025-07-09 16:51:07,075 - INFO - Telegram message sent successfully
+2025-07-09 16:51:07,327 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 16:51:07,328 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 16:51:07,328 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 16:51:07,329 - INFO -         - Achievement: 0.0%
+2025-07-09 16:51:07,329 - INFO -      Processing REGIONAL 1...
+2025-07-09 16:51:07,340 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:51:08,131 - INFO - Telegram message sent successfully
+2025-07-09 16:51:12,224 - INFO - Telegram message sent successfully
+2025-07-09 16:51:12,558 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 16:51:12,558 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 16:51:12,559 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 16:51:12,559 - INFO -         - Achievement: 0.0%
+2025-07-09 16:51:12,560 - INFO -      Processing REGIONAL 2...
+2025-07-09 16:51:12,572 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:51:13,855 - INFO - Telegram message sent successfully
+2025-07-09 16:51:15,279 - INFO - Telegram message sent successfully
+2025-07-09 16:51:15,470 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 16:51:15,471 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 16:51:15,471 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 16:51:15,471 - INFO -         - Achievement: 0.0%
+2025-07-09 16:51:15,475 - INFO -      Processing REGIONAL 6...
+2025-07-09 16:51:15,485 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:51:16,372 - INFO - Telegram message sent successfully
+2025-07-09 16:51:17,242 - INFO - Telegram message sent successfully
+2025-07-09 16:51:17,494 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 16:51:17,495 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 16:51:17,495 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 16:51:17,495 - INFO -         - Achievement: 0.0%
+2025-07-09 16:51:17,496 - INFO -      Processing REGIONAL 5...
+2025-07-09 16:51:17,506 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:51:18,324 - INFO - Telegram message sent successfully
+2025-07-09 16:51:19,146 - INFO - Telegram message sent successfully
+2025-07-09 16:51:19,424 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 16:51:19,425 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 16:51:19,425 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 16:51:19,426 - INFO -         - Achievement: 0.0%
+2025-07-09 16:51:19,426 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 16:53:44,676 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 16:53:45,301 - INFO - Chat accessible: Testing
+2025-07-09 16:53:45,302 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 16:53:45,303 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 16:53:50,564 - INFO -    - ZPSDT003 records: 676
+2025-07-09 16:53:50,565 - INFO -    - Brand records: 21164
+2025-07-09 16:53:50,565 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 16:53:50,568 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 16:53:50,569 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 16:53:50,657 - INFO -    - Recipients: 2 email
+2025-07-09 16:53:50,657 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 16:53:50,670 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 16:53:56,128 - INFO -    - Previous week data: 5436 records
+2025-07-09 16:53:56,134 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 16:53:56,134 - INFO -      Processing REGIONAL 3...
+2025-07-09 16:53:56,149 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:53:56,985 - INFO - Telegram message sent successfully
+2025-07-09 16:53:57,832 - INFO - Telegram message sent successfully
+2025-07-09 16:53:58,692 - INFO - Telegram message sent successfully
+2025-07-09 16:53:59,090 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 16:53:59,091 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 16:53:59,092 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 16:53:59,093 - INFO -         - Achievement: 0.0%
+2025-07-09 16:53:59,093 - INFO -      Processing REGIONAL 4...
+2025-07-09 16:53:59,103 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:54:00,112 - INFO - Telegram message sent successfully
+2025-07-09 16:54:00,925 - INFO - Telegram message sent successfully
+2025-07-09 16:54:04,969 - INFO - Telegram message sent successfully
+2025-07-09 16:54:05,236 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 16:54:05,236 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 16:54:05,238 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 16:54:05,238 - INFO -         - Achievement: 0.0%
+2025-07-09 16:54:05,238 - INFO -      Processing REGIONAL 1...
+2025-07-09 16:54:05,250 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:54:07,032 - INFO - Telegram message sent successfully
+2025-07-09 16:54:08,330 - INFO - Telegram message sent successfully
+2025-07-09 16:54:08,564 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 16:54:08,564 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 16:54:08,565 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 16:54:08,565 - INFO -         - Achievement: 0.0%
+2025-07-09 16:54:08,565 - INFO -      Processing REGIONAL 2...
+2025-07-09 16:54:08,575 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:54:09,414 - INFO - Telegram message sent successfully
+2025-07-09 16:54:10,233 - INFO - Telegram message sent successfully
+2025-07-09 16:54:10,498 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 16:54:10,499 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 16:54:10,500 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 16:54:10,500 - INFO -         - Achievement: 0.0%
+2025-07-09 16:54:10,501 - INFO -      Processing REGIONAL 6...
+2025-07-09 16:54:10,512 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:54:11,335 - INFO - Telegram message sent successfully
+2025-07-09 16:54:12,134 - INFO - Telegram message sent successfully
+2025-07-09 16:54:12,404 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 16:54:12,404 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 16:54:12,405 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 16:54:12,405 - INFO -         - Achievement: 0.0%
+2025-07-09 16:54:12,406 - INFO -      Processing REGIONAL 5...
+2025-07-09 16:54:12,415 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:54:13,206 - INFO - Telegram message sent successfully
+2025-07-09 16:54:14,108 - INFO - Telegram message sent successfully
+2025-07-09 16:54:14,365 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 16:54:14,366 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 16:54:14,366 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 16:54:14,375 - INFO -         - Achievement: 0.0%
+2025-07-09 16:54:14,377 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 16:57:32,226 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 16:57:32,824 - INFO - Chat accessible: Testing
+2025-07-09 16:57:32,825 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 16:57:32,825 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 16:58:00,757 - INFO -    - ZPSDT003 records: 676
+2025-07-09 16:58:00,758 - INFO -    - Brand records: 21164
+2025-07-09 16:58:00,758 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 16:58:00,762 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 16:58:00,762 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 16:58:00,836 - INFO -    - Recipients: 2 email
+2025-07-09 16:58:00,837 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 16:58:00,850 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 16:58:06,513 - INFO -    - Previous week data: 5436 records
+2025-07-09 16:58:06,519 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 16:58:06,520 - INFO -      Processing REGIONAL 4...
+2025-07-09 16:58:06,532 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:06,538 - ERROR -      X Error processing REGIONAL 4: 'qty_target_base'
+2025-07-09 16:58:06,538 - INFO -      Processing REGIONAL 3...
+2025-07-09 16:58:06,550 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:06,556 - ERROR -      X Error processing REGIONAL 3: 'qty_target_base'
+2025-07-09 16:58:06,557 - INFO -      Processing REGIONAL 1...
+2025-07-09 16:58:06,566 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:06,569 - ERROR -      X Error processing REGIONAL 1: 'qty_target_base'
+2025-07-09 16:58:06,569 - INFO -      Processing REGIONAL 2...
+2025-07-09 16:58:06,578 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:06,582 - ERROR -      X Error processing REGIONAL 2: 'qty_target_base'
+2025-07-09 16:58:06,583 - INFO -      Processing REGIONAL 6...
+2025-07-09 16:58:06,592 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:06,596 - ERROR -      X Error processing REGIONAL 6: 'qty_target_base'
+2025-07-09 16:58:06,597 - INFO -      Processing REGIONAL 5...
+2025-07-09 16:58:06,606 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:06,608 - ERROR -      X Error processing REGIONAL 5: 'qty_target_base'
+2025-07-09 16:58:06,608 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-07-09 16:58:34,103 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 16:58:34,723 - INFO - Chat accessible: Testing
+2025-07-09 16:58:34,723 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 16:58:34,725 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 16:58:41,051 - INFO -    - ZPSDT003 records: 676
+2025-07-09 16:58:41,052 - INFO -    - Brand records: 21164
+2025-07-09 16:58:41,056 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 16:58:41,059 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 16:58:41,060 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 16:58:41,129 - INFO -    - Recipients: 2 email
+2025-07-09 16:58:41,129 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 16:58:41,143 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 16:58:47,046 - INFO -    - Previous week data: 5436 records
+2025-07-09 16:58:47,053 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 16:58:47,053 - INFO -      Processing REGIONAL 3...
+2025-07-09 16:58:47,067 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:47,073 - ERROR -      X Error processing REGIONAL 3: 'qty_target_base'
+2025-07-09 16:58:47,073 - INFO -      Processing REGIONAL 4...
+2025-07-09 16:58:47,084 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:47,092 - ERROR -      X Error processing REGIONAL 4: 'qty_target_base'
+2025-07-09 16:58:47,092 - INFO -      Processing REGIONAL 2...
+2025-07-09 16:58:47,104 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:47,108 - ERROR -      X Error processing REGIONAL 2: 'qty_target_base'
+2025-07-09 16:58:47,109 - INFO -      Processing REGIONAL 1...
+2025-07-09 16:58:47,119 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:47,122 - ERROR -      X Error processing REGIONAL 1: 'qty_target_base'
+2025-07-09 16:58:47,123 - INFO -      Processing REGIONAL 6...
+2025-07-09 16:58:47,132 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:47,137 - ERROR -      X Error processing REGIONAL 6: 'qty_target_base'
+2025-07-09 16:58:47,137 - INFO -      Processing REGIONAL 5...
+2025-07-09 16:58:47,150 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 16:58:47,152 - ERROR -      X Error processing REGIONAL 5: 'qty_target_base'
+2025-07-09 16:58:47,153 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-07-09 17:04:06,778 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:04:07,701 - INFO - Chat accessible: Ragil
+2025-07-09 17:04:07,702 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:04:07,702 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:04:13,002 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:04:13,003 - INFO -    - Brand records: 21164
+2025-07-09 17:04:13,003 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:04:13,007 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:04:13,007 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:04:13,176 - INFO -    - Recipients: 2 email
+2025-07-09 17:04:13,176 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:04:13,192 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:04:17,523 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:04:17,529 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:04:17,529 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:04:17,542 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 17:04:17,548 - ERROR -      X Error processing REGIONAL 3: 'qty_target_ae'
+2025-07-09 17:04:17,549 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:04:17,560 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 17:04:17,568 - ERROR -      X Error processing REGIONAL 4: 'qty_target_ae'
+2025-07-09 17:04:17,568 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:04:17,578 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 17:04:17,581 - ERROR -      X Error processing REGIONAL 1: 'qty_target_ae'
+2025-07-09 17:04:17,581 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:04:17,591 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 17:04:17,596 - ERROR -      X Error processing REGIONAL 2: 'qty_target_ae'
+2025-07-09 17:04:17,597 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:04:17,608 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 17:04:17,612 - ERROR -      X Error processing REGIONAL 6: 'qty_target_ae'
+2025-07-09 17:04:17,612 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:04:17,621 - ERROR - Error getting notes from database: 1054 (42S22): Unknown column 'vkbur' in 'where clause'
+2025-07-09 17:04:17,624 - ERROR -      X Error processing REGIONAL 5: 'qty_target_ae'
+2025-07-09 17:04:17,624 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-07-09 17:07:52,175 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:07:53,327 - INFO - Chat accessible: Ragil
+2025-07-09 17:07:53,328 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:07:53,328 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:07:58,437 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:07:58,438 - INFO -    - Brand records: 21164
+2025-07-09 17:07:58,441 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:07:58,443 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:07:58,444 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:07:58,515 - INFO -    - Recipients: 2 email
+2025-07-09 17:07:58,516 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:07:58,529 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:08:03,097 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:08:03,103 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:08:03,103 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:08:03,109 - ERROR -      X Error processing REGIONAL 3: 'qty_target_ae'
+2025-07-09 17:08:03,110 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:08:03,116 - ERROR -      X Error processing REGIONAL 4: 'qty_target_ae'
+2025-07-09 17:08:03,117 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:08:03,119 - ERROR -      X Error processing REGIONAL 1: 'qty_target_ae'
+2025-07-09 17:08:03,119 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:08:03,123 - ERROR -      X Error processing REGIONAL 2: 'qty_target_ae'
+2025-07-09 17:08:03,123 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:08:03,129 - ERROR -      X Error processing REGIONAL 6: 'qty_target_ae'
+2025-07-09 17:08:03,130 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:08:03,132 - ERROR -      X Error processing REGIONAL 5: 'qty_target_ae'
+2025-07-09 17:08:03,132 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-07-09 17:09:33,349 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:09:34,196 - INFO - Chat accessible: Ragil
+2025-07-09 17:09:34,196 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:09:34,197 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:09:39,667 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:09:39,667 - INFO -    - Brand records: 21164
+2025-07-09 17:09:39,668 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:09:39,670 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:09:39,671 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:09:39,739 - INFO -    - Recipients: 2 email
+2025-07-09 17:09:39,740 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:09:39,753 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:09:44,802 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:09:44,809 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:09:44,810 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:09:45,715 - INFO - Telegram message sent successfully
+2025-07-09 17:09:47,488 - INFO - Telegram message sent successfully
+2025-07-09 17:09:47,862 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:09:47,863 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:09:47,864 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:09:47,864 - INFO -         - Achievement: 137.6%
+2025-07-09 17:09:47,865 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:09:48,754 - INFO - Telegram message sent successfully
+2025-07-09 17:09:49,591 - INFO - Telegram message sent successfully
+2025-07-09 17:09:49,850 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:09:49,851 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:09:49,851 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:09:49,852 - INFO -         - Achievement: 98.9%
+2025-07-09 17:09:49,852 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:09:50,708 - INFO - Telegram message sent successfully
+2025-07-09 17:09:51,582 - INFO - Telegram message sent successfully
+2025-07-09 17:09:51,847 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:09:51,848 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:09:51,848 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:09:51,849 - INFO -         - Achievement: 82.6%
+2025-07-09 17:09:51,849 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:09:52,668 - INFO - Telegram message sent successfully
+2025-07-09 17:09:53,529 - INFO - Telegram message sent successfully
+2025-07-09 17:09:53,813 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:09:53,814 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:09:53,814 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:09:53,815 - INFO -         - Achievement: 90.0%
+2025-07-09 17:09:53,815 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:09:54,696 - INFO - Telegram message sent successfully
+2025-07-09 17:09:55,538 - INFO - Telegram message sent successfully
+2025-07-09 17:09:55,803 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:09:55,803 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:09:55,804 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:09:55,804 - INFO -         - Achievement: 99.8%
+2025-07-09 17:09:55,804 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:09:56,727 - INFO - Telegram message sent successfully
+2025-07-09 17:09:57,581 - INFO - Telegram message sent successfully
+2025-07-09 17:09:57,860 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:09:57,860 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:09:57,861 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:09:57,862 - INFO -         - Achievement: 88.7%
+2025-07-09 17:09:57,862 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:11:34,078 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:11:34,898 - INFO - Chat accessible: Ragil
+2025-07-09 17:11:34,899 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:11:34,899 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:13:59,038 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:13:59,038 - INFO -    - Brand records: 21164
+2025-07-09 17:13:59,039 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:13:59,041 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:13:59,041 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:13:59,112 - INFO -    - Recipients: 2 email
+2025-07-09 17:13:59,112 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:13:59,125 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:14:05,884 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:14:05,890 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:14:05,891 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:14:07,207 - INFO - Telegram message sent successfully
+2025-07-09 17:14:08,013 - INFO - Telegram message sent successfully
+2025-07-09 17:14:08,342 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:14:08,342 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:14:08,343 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:14:08,344 - INFO -         - Achievement: 98.9%
+2025-07-09 17:14:08,344 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:14:09,259 - INFO - Telegram message sent successfully
+2025-07-09 17:14:10,095 - INFO - Telegram message sent successfully
+2025-07-09 17:14:10,420 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:14:10,421 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:14:10,421 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:14:10,422 - INFO -         - Achievement: 137.6%
+2025-07-09 17:14:10,422 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:14:11,316 - INFO - Telegram message sent successfully
+2025-07-09 17:14:12,226 - INFO - Telegram message sent successfully
+2025-07-09 17:14:12,492 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:14:12,493 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:14:12,493 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:14:12,493 - INFO -         - Achievement: 90.0%
+2025-07-09 17:14:12,494 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:14:13,466 - INFO - Telegram message sent successfully
+2025-07-09 17:14:14,537 - INFO - Telegram message sent successfully
+2025-07-09 17:14:14,880 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:14:14,880 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:14:14,881 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:14:14,881 - INFO -         - Achievement: 82.6%
+2025-07-09 17:14:14,881 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:14:15,752 - INFO - Telegram message sent successfully
+2025-07-09 17:14:16,681 - INFO - Telegram message sent successfully
+2025-07-09 17:14:16,991 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:14:16,992 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:14:16,992 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:14:16,992 - INFO -         - Achievement: 99.8%
+2025-07-09 17:14:16,993 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:14:17,883 - INFO - Telegram message sent successfully
+2025-07-09 17:14:18,720 - INFO - Telegram message sent successfully
+2025-07-09 17:14:19,037 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:14:19,038 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:14:19,039 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:14:19,039 - INFO -         - Achievement: 88.7%
+2025-07-09 17:14:19,040 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:15:16,015 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:15:16,897 - INFO - Chat accessible: Ragil
+2025-07-09 17:15:16,898 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:15:16,898 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:15:22,321 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:15:22,321 - INFO -    - Brand records: 21164
+2025-07-09 17:15:22,322 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:15:22,324 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:15:22,325 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:15:22,393 - INFO -    - Recipients: 2 email
+2025-07-09 17:15:22,393 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:15:22,407 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:15:27,404 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:15:27,411 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:15:27,411 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:15:28,286 - INFO - Telegram message sent successfully
+2025-07-09 17:15:28,907 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:15:29,153 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:15:29,153 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:15:29,154 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:15:29,154 - INFO -         - Achievement: 98.9%
+2025-07-09 17:15:29,155 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:15:30,024 - INFO - Telegram message sent successfully
+2025-07-09 17:15:30,679 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:15:30,954 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:15:30,954 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:15:30,955 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:15:30,955 - INFO -         - Achievement: 137.6%
+2025-07-09 17:15:30,955 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:15:31,764 - INFO - Telegram message sent successfully
+2025-07-09 17:15:32,397 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:15:32,695 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:15:32,696 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:15:32,696 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:15:32,697 - INFO -         - Achievement: 90.0%
+2025-07-09 17:15:32,697 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:15:33,551 - INFO - Telegram message sent successfully
+2025-07-09 17:15:34,180 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:15:34,460 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:15:34,460 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:15:34,461 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:15:34,461 - INFO -         - Achievement: 82.6%
+2025-07-09 17:15:34,462 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:15:35,322 - INFO - Telegram message sent successfully
+2025-07-09 17:15:35,964 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:15:36,229 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:15:36,230 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:15:36,230 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:15:36,231 - INFO -         - Achievement: 99.8%
+2025-07-09 17:15:36,232 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:15:37,050 - INFO - Telegram message sent successfully
+2025-07-09 17:15:37,735 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:15:38,000 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:15:38,001 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:15:38,002 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:15:38,002 - INFO -         - Achievement: 88.7%
+2025-07-09 17:15:38,002 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:17:03,126 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:17:04,010 - INFO - Chat accessible: Ragil
+2025-07-09 17:17:04,012 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:17:04,012 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:17:09,330 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:17:09,331 - INFO -    - Brand records: 21164
+2025-07-09 17:17:09,331 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:17:09,334 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:17:09,334 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:17:09,404 - INFO -    - Recipients: 2 email
+2025-07-09 17:17:09,405 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:17:09,418 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:17:13,743 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:17:13,749 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:17:13,750 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:17:14,749 - INFO - Telegram message sent successfully
+2025-07-09 17:17:15,403 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:17:15,686 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:17:15,687 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:17:15,687 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:17:15,688 - INFO -         - Achievement: 98.9%
+2025-07-09 17:17:15,689 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:17:16,563 - INFO - Telegram message sent successfully
+2025-07-09 17:17:17,194 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:17:17,442 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:17:17,443 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:17:17,443 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:17:17,447 - INFO -         - Achievement: 137.6%
+2025-07-09 17:17:17,447 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:17:18,282 - INFO - Telegram message sent successfully
+2025-07-09 17:17:18,908 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:17:19,174 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:17:19,175 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:17:19,175 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:17:19,176 - INFO -         - Achievement: 90.0%
+2025-07-09 17:17:19,176 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:17:20,026 - INFO - Telegram message sent successfully
+2025-07-09 17:17:20,673 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:17:20,938 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:17:20,938 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:17:20,939 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:17:20,940 - INFO -         - Achievement: 82.6%
+2025-07-09 17:17:20,940 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:17:21,814 - INFO - Telegram message sent successfully
+2025-07-09 17:17:22,464 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:17:22,747 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:17:22,747 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:17:22,748 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:17:22,751 - INFO -         - Achievement: 99.8%
+2025-07-09 17:17:22,751 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:17:23,736 - INFO - Telegram message sent successfully
+2025-07-09 17:17:24,413 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:17:24,675 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:17:24,677 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:17:24,677 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:17:24,680 - INFO -         - Achievement: 88.7%
+2025-07-09 17:17:24,680 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:20:46,165 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:20:46,990 - INFO - Chat accessible: Ragil
+2025-07-09 17:20:46,991 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:20:46,991 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:20:52,579 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:20:52,580 - INFO -    - Brand records: 21164
+2025-07-09 17:20:52,581 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:20:52,583 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:20:52,584 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:20:52,657 - INFO -    - Recipients: 2 email
+2025-07-09 17:20:52,657 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:20:52,670 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:20:57,532 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:20:57,539 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:20:57,540 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:20:58,370 - INFO - Telegram message sent successfully
+2025-07-09 17:20:58,999 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:20:59,264 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:20:59,265 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:20:59,266 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:20:59,266 - INFO -         - Achievement: 98.9%
+2025-07-09 17:20:59,267 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:21:00,143 - INFO - Telegram message sent successfully
+2025-07-09 17:21:00,783 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:21:01,112 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:21:01,113 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:21:01,113 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:21:01,114 - INFO -         - Achievement: 137.6%
+2025-07-09 17:21:01,114 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:21:02,028 - INFO - Telegram message sent successfully
+2025-07-09 17:21:02,727 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:21:03,053 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:21:03,054 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:21:03,054 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:21:03,055 - INFO -         - Achievement: 90.0%
+2025-07-09 17:21:03,055 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:21:03,894 - INFO - Telegram message sent successfully
+2025-07-09 17:21:04,569 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:21:04,864 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:21:04,865 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:21:04,866 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:21:04,866 - INFO -         - Achievement: 82.6%
+2025-07-09 17:21:04,866 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:21:06,967 - INFO - Telegram message sent successfully
+2025-07-09 17:21:07,637 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:21:07,886 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:21:07,887 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:21:07,888 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:21:07,888 - INFO -         - Achievement: 99.8%
+2025-07-09 17:21:07,888 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:21:08,711 - INFO - Telegram message sent successfully
+2025-07-09 17:21:09,369 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:21:09,617 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:21:09,617 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:21:09,617 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:21:09,617 - INFO -         - Achievement: 88.7%
+2025-07-09 17:21:09,618 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:23:29,706 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:23:30,744 - INFO - Chat accessible: Ragil
+2025-07-09 17:23:30,745 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:23:30,745 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:23:36,462 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:23:36,462 - INFO -    - Brand records: 21164
+2025-07-09 17:23:36,463 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:23:36,466 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:23:36,466 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:23:36,537 - INFO -    - Recipients: 2 email
+2025-07-09 17:23:36,538 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:23:36,551 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:23:40,963 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:23:40,969 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:23:40,970 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:23:41,946 - INFO - Telegram message sent successfully
+2025-07-09 17:23:42,565 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:23:42,925 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:23:42,926 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:23:42,926 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:23:42,927 - INFO -         - Achievement: 137.6%
+2025-07-09 17:23:42,927 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:23:43,757 - INFO - Telegram message sent successfully
+2025-07-09 17:23:44,459 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:23:44,710 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:23:44,711 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:23:44,711 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:23:44,712 - INFO -         - Achievement: 98.9%
+2025-07-09 17:23:44,712 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:23:45,526 - INFO - Telegram message sent successfully
+2025-07-09 17:23:46,147 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:23:46,502 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:23:46,502 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:23:46,503 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:23:46,503 - INFO -         - Achievement: 90.0%
+2025-07-09 17:23:46,503 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:23:47,386 - INFO - Telegram message sent successfully
+2025-07-09 17:23:48,078 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:23:48,442 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:23:48,442 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:23:48,443 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:23:48,443 - INFO -         - Achievement: 82.6%
+2025-07-09 17:23:48,444 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:23:49,334 - INFO - Telegram message sent successfully
+2025-07-09 17:23:49,957 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:23:50,206 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:23:50,207 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:23:50,207 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:23:50,208 - INFO -         - Achievement: 99.8%
+2025-07-09 17:23:50,208 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:23:51,057 - INFO - Telegram message sent successfully
+2025-07-09 17:23:51,714 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:23:52,014 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:23:52,015 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:23:52,015 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:23:52,016 - INFO -         - Achievement: 88.7%
+2025-07-09 17:23:52,016 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:25:07,359 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:25:08,150 - INFO - Chat accessible: Ragil
+2025-07-09 17:25:08,152 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:25:08,155 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:25:14,002 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:25:14,002 - INFO -    - Brand records: 21164
+2025-07-09 17:25:14,003 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:25:14,005 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:25:14,006 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:25:14,073 - INFO -    - Recipients: 2 email
+2025-07-09 17:25:14,073 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:25:14,086 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:25:18,379 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:25:18,386 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:25:18,387 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:25:19,241 - INFO - Telegram message sent successfully
+2025-07-09 17:25:19,883 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:25:20,151 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:25:20,152 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:25:20,153 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:25:20,153 - INFO -         - Achievement: 137.6%
+2025-07-09 17:25:20,154 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:25:21,101 - INFO - Telegram message sent successfully
+2025-07-09 17:25:21,743 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:25:22,010 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:25:22,011 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:25:22,011 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:25:22,012 - INFO -         - Achievement: 98.9%
+2025-07-09 17:25:22,012 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:25:22,863 - INFO - Telegram message sent successfully
+2025-07-09 17:25:23,489 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:25:23,800 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:25:23,800 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:25:23,801 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:25:23,801 - INFO -         - Achievement: 82.6%
+2025-07-09 17:25:23,802 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:25:24,689 - INFO - Telegram message sent successfully
+2025-07-09 17:25:26,795 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:25:27,063 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:25:27,063 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:25:27,066 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:25:27,067 - INFO -         - Achievement: 90.0%
+2025-07-09 17:25:27,067 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:25:27,890 - INFO - Telegram message sent successfully
+2025-07-09 17:25:28,544 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:25:28,849 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:25:28,850 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:25:28,853 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:25:28,854 - INFO -         - Achievement: 99.8%
+2025-07-09 17:25:28,854 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:25:29,860 - INFO - Telegram message sent successfully
+2025-07-09 17:25:30,478 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:25:30,738 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:25:30,738 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:25:30,739 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:25:30,739 - INFO -         - Achievement: 88.7%
+2025-07-09 17:25:30,740 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:27:57,766 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:27:58,604 - INFO - Chat accessible: Ragil
+2025-07-09 17:27:58,604 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:27:58,605 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:28:04,164 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:28:04,164 - INFO -    - Brand records: 21164
+2025-07-09 17:28:04,165 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:28:04,168 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:28:04,168 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:28:04,236 - INFO -    - Recipients: 2 email
+2025-07-09 17:28:04,237 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:28:04,251 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:28:09,011 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:28:09,017 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:28:09,018 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:28:09,863 - INFO - Telegram message sent successfully
+2025-07-09 17:28:10,512 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:10,879 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:10,880 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:28:10,880 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:28:10,881 - INFO -         - Achievement: 98.9%
+2025-07-09 17:28:10,881 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:28:11,740 - INFO - Telegram message sent successfully
+2025-07-09 17:28:12,385 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:12,658 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:12,658 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:28:12,659 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:28:12,659 - INFO -         - Achievement: 82.6%
+2025-07-09 17:28:12,660 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:28:13,496 - INFO - Telegram message sent successfully
+2025-07-09 17:28:14,170 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:14,427 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:14,428 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:28:14,428 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:28:14,429 - INFO -         - Achievement: 137.6%
+2025-07-09 17:28:14,429 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:28:15,313 - INFO - Telegram message sent successfully
+2025-07-09 17:28:15,972 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:16,272 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:16,272 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:28:16,273 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:28:16,273 - INFO -         - Achievement: 90.0%
+2025-07-09 17:28:16,273 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:28:17,775 - INFO - Telegram message sent successfully
+2025-07-09 17:28:18,414 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:18,673 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:18,674 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:28:18,674 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:28:18,675 - INFO -         - Achievement: 99.8%
+2025-07-09 17:28:18,678 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:28:19,528 - INFO - Telegram message sent successfully
+2025-07-09 17:28:20,180 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:20,448 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:20,449 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:28:20,449 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:28:20,449 - INFO -         - Achievement: 88.7%
+2025-07-09 17:28:20,450 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:28:46,134 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:28:46,875 - INFO - Chat accessible: Ragil
+2025-07-09 17:28:46,875 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:28:46,876 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:28:51,826 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:28:51,826 - INFO -    - Brand records: 21164
+2025-07-09 17:28:51,826 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:28:51,829 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:28:51,829 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:28:51,899 - INFO -    - Recipients: 2 email
+2025-07-09 17:28:51,900 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:28:51,913 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:28:56,249 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:28:56,255 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:28:56,256 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:28:57,158 - INFO - Telegram message sent successfully
+2025-07-09 17:28:57,825 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:58,115 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:58,115 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:28:58,116 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:28:58,116 - INFO -         - Achievement: 98.9%
+2025-07-09 17:28:58,116 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:28:58,966 - INFO - Telegram message sent successfully
+2025-07-09 17:28:59,617 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:28:59,898 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:28:59,898 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:28:59,898 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:28:59,898 - INFO -         - Achievement: 137.6%
+2025-07-09 17:28:59,899 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:29:00,744 - INFO - Telegram message sent successfully
+2025-07-09 17:29:01,371 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:29:01,641 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:29:01,642 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:29:01,642 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:29:01,643 - INFO -         - Achievement: 82.6%
+2025-07-09 17:29:01,643 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:29:02,553 - INFO - Telegram message sent successfully
+2025-07-09 17:29:03,179 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:29:03,384 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:29:03,384 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:29:03,386 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:29:03,386 - INFO -         - Achievement: 90.0%
+2025-07-09 17:29:03,387 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:29:04,204 - INFO - Telegram message sent successfully
+2025-07-09 17:29:04,884 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:29:05,157 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:29:05,157 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:29:05,158 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:29:05,158 - INFO -         - Achievement: 99.8%
+2025-07-09 17:29:05,158 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:29:06,983 - INFO - Telegram message sent successfully
+2025-07-09 17:29:07,600 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:29:07,860 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:29:07,861 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:29:07,861 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:29:07,862 - INFO -         - Achievement: 88.7%
+2025-07-09 17:29:07,862 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:29:52,685 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:29:53,708 - INFO - Chat accessible: Ragil
+2025-07-09 17:29:53,709 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:29:53,710 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:29:59,395 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:29:59,396 - INFO -    - Brand records: 21164
+2025-07-09 17:29:59,396 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:29:59,399 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:29:59,399 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:29:59,466 - INFO -    - Recipients: 2 email
+2025-07-09 17:29:59,467 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:29:59,480 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:30:03,850 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:30:03,858 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:30:03,858 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:30:04,756 - INFO - Telegram message sent successfully
+2025-07-09 17:30:05,405 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:30:05,666 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:30:05,666 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:30:05,666 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:30:05,667 - INFO -         - Achievement: 98.9%
+2025-07-09 17:30:05,667 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:30:06,555 - INFO - Telegram message sent successfully
+2025-07-09 17:30:07,217 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:30:07,539 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:30:07,539 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:30:07,540 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:30:07,543 - INFO -         - Achievement: 137.6%
+2025-07-09 17:30:07,543 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:30:08,478 - INFO - Telegram message sent successfully
+2025-07-09 17:30:09,133 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:30:09,367 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:30:09,368 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:30:09,368 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:30:09,369 - INFO -         - Achievement: 90.0%
+2025-07-09 17:30:09,369 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:30:10,217 - INFO - Telegram message sent successfully
+2025-07-09 17:30:10,860 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:30:11,111 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:30:11,111 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:30:11,112 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:30:11,113 - INFO -         - Achievement: 82.6%
+2025-07-09 17:30:11,113 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:30:11,964 - INFO - Telegram message sent successfully
+2025-07-09 17:30:12,664 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:30:12,988 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:30:12,989 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:30:12,990 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:30:12,990 - INFO -         - Achievement: 99.8%
+2025-07-09 17:30:12,991 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:30:13,824 - INFO - Telegram message sent successfully
+2025-07-09 17:30:14,479 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:30:14,812 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:30:14,813 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:30:14,813 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:30:14,814 - INFO -         - Achievement: 88.7%
+2025-07-09 17:30:14,814 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:31:09,273 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:31:10,072 - INFO - Chat accessible: Ragil
+2025-07-09 17:31:10,074 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:31:10,074 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:31:15,647 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:31:15,648 - INFO -    - Brand records: 21164
+2025-07-09 17:31:15,648 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:31:15,651 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:31:15,651 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:31:15,722 - INFO -    - Recipients: 2 email
+2025-07-09 17:31:15,722 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:31:15,735 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:31:20,425 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:31:20,431 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:31:20,432 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:31:21,354 - INFO - Telegram message sent successfully
+2025-07-09 17:31:22,032 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:31:22,283 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:31:22,284 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:31:22,284 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:31:22,285 - INFO -         - Achievement: 98.9%
+2025-07-09 17:31:22,285 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:31:23,141 - INFO - Telegram message sent successfully
+2025-07-09 17:31:23,748 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:31:23,994 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:31:23,995 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:31:23,995 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:31:23,996 - INFO -         - Achievement: 137.6%
+2025-07-09 17:31:23,996 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:31:24,871 - INFO - Telegram message sent successfully
+2025-07-09 17:31:25,501 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:31:25,767 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:31:25,768 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:31:25,768 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:31:25,769 - INFO -         - Achievement: 90.0%
+2025-07-09 17:31:25,769 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:31:26,645 - INFO - Telegram message sent successfully
+2025-07-09 17:31:27,282 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:31:27,548 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:31:27,549 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:31:27,550 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:31:27,550 - INFO -         - Achievement: 82.6%
+2025-07-09 17:31:27,551 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:31:28,456 - INFO - Telegram message sent successfully
+2025-07-09 17:31:29,106 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:31:29,361 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:31:29,362 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:31:29,362 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:31:29,363 - INFO -         - Achievement: 99.8%
+2025-07-09 17:31:29,363 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:31:30,290 - INFO - Telegram message sent successfully
+2025-07-09 17:31:30,974 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:31:31,233 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:31:31,234 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:31:31,235 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:31:31,235 - INFO -         - Achievement: 88.7%
+2025-07-09 17:31:31,235 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:39:10,472 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:39:11,497 - INFO - Chat accessible: Ragil
+2025-07-09 17:39:11,498 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:39:11,499 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:39:16,651 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:39:16,651 - INFO -    - Brand records: 21164
+2025-07-09 17:39:16,652 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:39:16,654 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:39:16,654 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:39:16,730 - INFO -    - Recipients: 2 email
+2025-07-09 17:39:16,731 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:39:16,744 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:39:21,651 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:39:21,658 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:39:21,658 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:39:22,582 - INFO - Telegram message sent successfully
+2025-07-09 17:39:23,255 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:39:23,528 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:39:23,529 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:39:23,529 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:39:23,529 - INFO -         - Achievement: 137.6%
+2025-07-09 17:39:23,530 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:39:24,373 - INFO - Telegram message sent successfully
+2025-07-09 17:39:25,031 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:39:25,351 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:39:25,352 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:39:25,352 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:39:25,353 - INFO -         - Achievement: 98.9%
+2025-07-09 17:39:25,353 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:39:26,214 - INFO - Telegram message sent successfully
+2025-07-09 17:39:26,835 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:39:27,085 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:39:27,086 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:39:27,086 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:39:27,086 - INFO -         - Achievement: 82.6%
+2025-07-09 17:39:27,087 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:39:27,912 - INFO - Telegram message sent successfully
+2025-07-09 17:39:28,544 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:39:28,833 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:39:28,833 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:39:28,834 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:39:28,834 - INFO -         - Achievement: 90.0%
+2025-07-09 17:39:28,834 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:39:29,689 - INFO - Telegram message sent successfully
+2025-07-09 17:39:30,339 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:39:30,595 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:39:30,595 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:39:30,595 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:39:30,596 - INFO -         - Achievement: 99.8%
+2025-07-09 17:39:30,596 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:39:31,420 - INFO - Telegram message sent successfully
+2025-07-09 17:39:32,044 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:39:32,245 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:39:32,246 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:39:32,247 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:39:32,247 - INFO -         - Achievement: 88.7%
+2025-07-09 17:39:32,248 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:41:17,162 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:41:18,004 - INFO - Chat accessible: Ragil
+2025-07-09 17:41:18,005 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:41:18,005 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:41:23,069 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:41:23,070 - INFO -    - Brand records: 21164
+2025-07-09 17:41:23,071 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:41:23,073 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:41:23,074 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:41:23,146 - INFO -    - Recipients: 2 email
+2025-07-09 17:41:23,147 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:41:23,160 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:41:27,393 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:41:27,399 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:41:27,400 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:41:28,589 - INFO - Telegram message sent successfully
+2025-07-09 17:41:29,446 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:41:29,819 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:41:29,820 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:41:29,821 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:41:29,821 - INFO -         - Achievement: 98.9%
+2025-07-09 17:41:29,822 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:41:30,679 - INFO - Telegram message sent successfully
+2025-07-09 17:41:31,315 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:41:31,558 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:41:31,559 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:41:31,559 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:41:31,559 - INFO -         - Achievement: 137.6%
+2025-07-09 17:41:31,560 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:41:32,384 - INFO - Telegram message sent successfully
+2025-07-09 17:41:33,039 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:41:33,346 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:41:33,347 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:41:33,347 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:41:33,348 - INFO -         - Achievement: 90.0%
+2025-07-09 17:41:33,348 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:41:34,224 - INFO - Telegram message sent successfully
+2025-07-09 17:41:34,880 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:41:35,135 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:41:35,136 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:41:35,136 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:41:35,136 - INFO -         - Achievement: 82.6%
+2025-07-09 17:41:35,137 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:41:36,016 - INFO - Telegram message sent successfully
+2025-07-09 17:41:36,678 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:41:36,965 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:41:36,966 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:41:36,967 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:41:36,967 - INFO -         - Achievement: 99.8%
+2025-07-09 17:41:36,967 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:41:37,852 - INFO - Telegram message sent successfully
+2025-07-09 17:41:38,521 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:41:38,772 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:41:38,772 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:41:38,773 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:41:38,773 - INFO -         - Achievement: 88.7%
+2025-07-09 17:41:38,773 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:42:19,355 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:42:20,177 - INFO - Chat accessible: Ragil
+2025-07-09 17:42:20,178 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:42:20,178 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:42:25,708 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:42:25,708 - INFO -    - Brand records: 21164
+2025-07-09 17:42:25,709 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:42:25,713 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:42:25,713 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:42:25,779 - INFO -    - Recipients: 2 email
+2025-07-09 17:42:25,779 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:42:25,792 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:42:31,741 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:42:31,748 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:42:31,748 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:42:32,663 - INFO - Telegram message sent successfully
+2025-07-09 17:42:33,337 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:42:33,605 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:42:33,605 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:42:33,606 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:42:33,606 - INFO -         - Achievement: 98.9%
+2025-07-09 17:42:33,606 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:42:34,443 - INFO - Telegram message sent successfully
+2025-07-09 17:42:35,097 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:42:35,363 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:42:35,364 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:42:35,365 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:42:35,365 - INFO -         - Achievement: 137.6%
+2025-07-09 17:42:35,366 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:42:36,243 - INFO - Telegram message sent successfully
+2025-07-09 17:42:36,908 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:42:37,238 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:42:37,239 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:42:37,239 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:42:37,239 - INFO -         - Achievement: 90.0%
+2025-07-09 17:42:37,240 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:42:38,118 - INFO - Telegram message sent successfully
+2025-07-09 17:42:38,747 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:42:39,065 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:42:39,065 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:42:39,066 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:42:39,066 - INFO -         - Achievement: 82.6%
+2025-07-09 17:42:39,066 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:42:39,915 - INFO - Telegram message sent successfully
+2025-07-09 17:42:40,578 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:42:40,837 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:42:40,837 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:42:40,838 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:42:40,839 - INFO -         - Achievement: 99.8%
+2025-07-09 17:42:40,839 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:42:41,646 - INFO - Telegram message sent successfully
+2025-07-09 17:42:42,284 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:42:42,536 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:42:42,537 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:42:42,537 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:42:42,537 - INFO -         - Achievement: 88.7%
+2025-07-09 17:42:42,538 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 17:42:59,621 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 17:43:00,230 - INFO - Chat accessible: Ragil
+2025-07-09 17:43:00,231 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 17:43:00,234 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 17:43:05,849 - INFO -    - ZPSDT003 records: 676
+2025-07-09 17:43:05,850 - INFO -    - Brand records: 21164
+2025-07-09 17:43:05,853 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 17:43:05,855 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 17:43:05,856 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 17:43:05,935 - INFO -    - Recipients: 2 email
+2025-07-09 17:43:05,935 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 17:43:05,949 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 17:43:10,487 - INFO -    - Previous week data: 5436 records
+2025-07-09 17:43:10,495 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 17:43:10,495 - INFO -      Processing REGIONAL 3...
+2025-07-09 17:43:11,647 - INFO - Telegram message sent successfully
+2025-07-09 17:43:12,276 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:43:12,583 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 17:43:12,584 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 17:43:12,584 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 17:43:12,584 - INFO -         - Achievement: 98.9%
+2025-07-09 17:43:12,585 - INFO -      Processing REGIONAL 4...
+2025-07-09 17:43:13,697 - INFO - Telegram message sent successfully
+2025-07-09 17:43:14,489 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:43:14,735 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 17:43:14,735 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 17:43:14,736 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 17:43:14,739 - INFO -         - Achievement: 137.6%
+2025-07-09 17:43:14,739 - INFO -      Processing REGIONAL 2...
+2025-07-09 17:43:15,594 - INFO - Telegram message sent successfully
+2025-07-09 17:43:16,259 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:43:16,535 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 17:43:16,536 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 17:43:16,536 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 17:43:16,536 - INFO -         - Achievement: 82.6%
+2025-07-09 17:43:16,537 - INFO -      Processing REGIONAL 1...
+2025-07-09 17:43:17,428 - INFO - Telegram message sent successfully
+2025-07-09 17:43:18,074 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:43:18,371 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 17:43:18,372 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 17:43:18,372 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 17:43:18,372 - INFO -         - Achievement: 90.0%
+2025-07-09 17:43:18,373 - INFO -      Processing REGIONAL 6...
+2025-07-09 17:43:20,251 - INFO - Telegram message sent successfully
+2025-07-09 17:43:20,978 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:43:21,294 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 17:43:21,295 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 17:43:21,295 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 17:43:21,296 - INFO -         - Achievement: 99.8%
+2025-07-09 17:43:21,296 - INFO -      Processing REGIONAL 5...
+2025-07-09 17:43:22,196 - INFO - Telegram message sent successfully
+2025-07-09 17:43:23,830 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 17:43:24,087 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 17:43:24,088 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 17:43:24,088 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 17:43:24,089 - INFO -         - Achievement: 88.7%
+2025-07-09 17:43:24,090 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-09 20:30:23,310 - INFO - Bot connected: @SAPSupportbot
+2025-07-09 20:30:24,433 - INFO - Chat accessible: Ragil
+2025-07-09 20:30:24,434 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-09 20:30:24,434 - INFO - 1. Mengambil data dari SAP...
+2025-07-09 20:30:45,662 - INFO -    - ZPSDT003 records: 676
+2025-07-09 20:30:45,663 - INFO -    - Brand records: 21164
+2025-07-09 20:30:45,696 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-09 20:30:45,700 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-09 20:30:45,701 - INFO - 3. Mengambil daftar penerima...
+2025-07-09 20:30:46,164 - INFO -    - Recipients: 2 email
+2025-07-09 20:30:46,165 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-09 20:30:46,184 - INFO -    - Ditemukan 7473 brand data
+2025-07-09 20:30:54,634 - INFO -    - Previous week data: 5454 records
+2025-07-09 20:30:54,645 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-09 20:30:54,646 - INFO -      Processing REGIONAL 4...
+2025-07-09 20:30:56,240 - INFO - Telegram message sent successfully
+2025-07-09 20:30:57,123 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 20:31:08,687 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-09 20:31:08,688 - INFO -         - Existing: 4,070.9 BOX
+2025-07-09 20:31:08,689 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-09 20:31:08,689 - INFO -         - Achievement: 137.6%
+2025-07-09 20:31:08,690 - INFO -      Processing REGIONAL 2...
+2025-07-09 20:31:09,884 - INFO - Telegram message sent successfully
+2025-07-09 20:31:10,657 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 20:31:13,931 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-09 20:31:13,933 - INFO -         - Existing: 3,949.6 BOX
+2025-07-09 20:31:13,934 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-09 20:31:13,934 - INFO -         - Achievement: 82.6%
+2025-07-09 20:31:13,935 - INFO -      Processing REGIONAL 1...
+2025-07-09 20:31:15,942 - INFO - Telegram message sent successfully
+2025-07-09 20:31:16,937 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 20:31:28,826 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-09 20:31:28,826 - INFO -         - Existing: 3,662.9 BOX
+2025-07-09 20:31:28,827 - INFO -         - New Brand: 137.3 BOX
+2025-07-09 20:31:28,827 - INFO -         - Achievement: 90.0%
+2025-07-09 20:31:28,828 - INFO -      Processing REGIONAL 3...
+2025-07-09 20:31:30,162 - INFO - Telegram message sent successfully
+2025-07-09 20:31:31,011 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 20:31:32,383 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-09 20:31:32,384 - INFO -         - Existing: 4,412.0 BOX
+2025-07-09 20:31:32,384 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-09 20:31:32,385 - INFO -         - Achievement: 98.9%
+2025-07-09 20:31:32,385 - INFO -      Processing REGIONAL 6...
+2025-07-09 20:31:37,426 - INFO - Telegram message sent successfully
+2025-07-09 20:31:38,920 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 20:31:51,387 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-09 20:31:51,388 - INFO -         - Existing: 4,001.2 BOX
+2025-07-09 20:31:51,388 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-09 20:31:51,390 - INFO -         - Achievement: 99.8%
+2025-07-09 20:31:51,390 - INFO -      Processing REGIONAL 5...
+2025-07-09 20:31:52,739 - INFO - Telegram message sent successfully
+2025-07-09 20:31:53,457 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-09 20:31:57,268 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-09 20:31:57,268 - INFO -         - Existing: 1,070.5 BOX
+2025-07-09 20:31:57,268 - INFO -         - New Brand: 141.3 BOX
+2025-07-09 20:31:57,271 - INFO -         - Achievement: 88.7%
+2025-07-09 20:31:57,271 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-10 04:09:52,227 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:09:53,040 - INFO - Chat accessible: Ragil
+2025-07-10 04:09:54,920 - INFO - ✓ WhatsApp Green API connection successful
+2025-07-10 04:09:54,921 - INFO - Account: 6281259467532@c.us
+2025-07-10 04:09:54,952 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:09:54,953 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:10:00,655 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:10:00,656 - INFO -    - Brand records: 21164
+2025-07-10 04:10:00,656 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:10:00,661 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:10:00,662 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:10:00,906 - INFO -    - Recipients: 2 email
+2025-07-10 04:10:00,906 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:10:00,925 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:10:06,215 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:10:06,227 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:10:06,228 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:10:07,448 - INFO - Telegram message sent successfully
+2025-07-10 04:10:07,450 - ERROR - Database connection not available
+2025-07-10 04:10:07,450 - ERROR - Error sending regional WhatsApp report: name 'region_name' is not defined
+2025-07-10 04:10:08,173 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:11:11,376 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:11:12,193 - INFO - Chat accessible: Ragil
+2025-07-10 04:11:13,696 - INFO - ✓ WhatsApp Green API connection successful
+2025-07-10 04:11:13,696 - INFO - Account: 6281259467532@c.us
+2025-07-10 04:11:13,698 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:11:13,698 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:11:19,142 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:11:19,143 - INFO -    - Brand records: 21164
+2025-07-10 04:11:19,174 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:11:19,181 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:11:19,181 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:11:19,291 - INFO -    - Recipients: 2 email
+2025-07-10 04:11:19,293 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:11:19,313 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:11:24,608 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:11:24,619 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:11:24,620 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:11:25,546 - INFO - Telegram message sent successfully
+2025-07-10 04:11:25,548 - ERROR - Database connection not available
+2025-07-10 04:11:25,548 - ERROR - Database connection not available
+2025-07-10 04:11:26,444 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:14:54,176 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:14:55,281 - INFO - Chat accessible: Ragil
+2025-07-10 04:14:56,932 - INFO - ✓ WhatsApp Green API connection successful
+2025-07-10 04:14:56,933 - INFO - Account: 6281259467532@c.us
+2025-07-10 04:14:56,934 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:14:56,934 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:15:02,393 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:15:02,394 - INFO -    - Brand records: 21164
+2025-07-10 04:15:02,394 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:15:02,397 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:15:02,397 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:15:02,514 - INFO -    - Recipients: 2 email
+2025-07-10 04:15:02,515 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:15:02,533 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:15:07,608 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:15:07,618 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:15:07,619 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:15:08,775 - INFO - Telegram message sent successfully
+2025-07-10 04:15:08,777 - ERROR - Error connecting to database: 'WhatsAppService' object has no attribute 'db_config'
+2025-07-10 04:15:08,777 - ERROR - Error getting group ID from database: 'WhatsAppService' object has no attribute 'db_config'
+2025-07-10 04:15:08,778 - ERROR - Error getting default group ID from database: 'WhatsAppService' object has no attribute 'db_connection'
+2025-07-10 04:15:09,632 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:16:09,515 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:16:10,445 - INFO - Chat accessible: Ragil
+2025-07-10 04:16:11,851 - INFO - ✓ WhatsApp Green API connection successful
+2025-07-10 04:16:11,852 - INFO - Account: 6281259467532@c.us
+2025-07-10 04:16:11,852 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:16:11,852 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:16:17,455 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:16:17,457 - INFO -    - Brand records: 21164
+2025-07-10 04:16:17,457 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:16:17,460 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:16:17,461 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:16:17,581 - INFO -    - Recipients: 2 email
+2025-07-10 04:16:17,581 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:16:17,598 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:16:22,670 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:16:22,680 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:16:22,703 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:16:23,801 - INFO - Telegram message sent successfully
+2025-07-10 04:16:25,257 - ERROR - WhatsApp API error: 400 - {"statusCode":400,"timestamp":"2025-07-09T21:16:24.331Z","path":"/waInstance7105275644/sendMessage/e78fc9fbe0924191a976341e80a8edc377b46def788845fca8","message":"Validation failed. Details: 'chatId' must be a string"}
+2025-07-10 04:16:25,259 - ERROR - ✗ Failed to send WhatsApp report to group
+2025-07-10 04:16:26,056 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:16:33,926 - ERROR -      X REGIONAL 3 - Gagal kirim (Telegram: True, Email: True)
+2025-07-10 04:16:33,927 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:16:35,108 - INFO - Telegram message sent successfully
+2025-07-10 04:16:36,691 - ERROR - WhatsApp API error: 400 - {"statusCode":400,"timestamp":"2025-07-09T21:16:35.727Z","path":"/waInstance7105275644/sendMessage/e78fc9fbe0924191a976341e80a8edc377b46def788845fca8","message":"Validation failed. Details: 'chatId' must be a string"}
+2025-07-10 04:16:36,692 - ERROR - ✗ Failed to send WhatsApp report to group
+2025-07-10 04:16:37,307 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:16:38,143 - ERROR -      X REGIONAL 4 - Gagal kirim (Telegram: True, Email: True)
+2025-07-10 04:16:38,143 - INFO -      Processing REGIONAL 1...
+2025-07-10 04:16:39,349 - INFO - Telegram message sent successfully
+2025-07-10 04:16:41,053 - ERROR - WhatsApp API error: 400 - {"statusCode":400,"timestamp":"2025-07-09T21:16:40.037Z","path":"/waInstance7105275644/sendMessage/e78fc9fbe0924191a976341e80a8edc377b46def788845fca8","message":"Validation failed. Details: 'chatId' must be a string"}
+2025-07-10 04:16:41,054 - ERROR - ✗ Failed to send WhatsApp report to group
+2025-07-10 04:16:41,757 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:16:52,319 - ERROR -      X REGIONAL 1 - Gagal kirim (Telegram: True, Email: True)
+2025-07-10 04:16:52,322 - INFO -      Processing REGIONAL 2...
+2025-07-10 04:16:53,464 - INFO - Telegram message sent successfully
+2025-07-10 04:16:55,156 - ERROR - WhatsApp API error: 400 - {"statusCode":400,"timestamp":"2025-07-09T21:16:54.226Z","path":"/waInstance7105275644/sendMessage/e78fc9fbe0924191a976341e80a8edc377b46def788845fca8","message":"Validation failed. Details: 'chatId' must be a string"}
+2025-07-10 04:16:55,158 - ERROR - ✗ Failed to send WhatsApp report to group
+2025-07-10 04:16:56,008 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:16:57,055 - ERROR -      X REGIONAL 2 - Gagal kirim (Telegram: True, Email: True)
+2025-07-10 04:16:57,056 - INFO -      Processing REGIONAL 6...
+2025-07-10 04:16:58,167 - INFO - Telegram message sent successfully
+2025-07-10 04:16:59,827 - ERROR - WhatsApp API error: 400 - {"statusCode":400,"timestamp":"2025-07-09T21:16:58.767Z","path":"/waInstance7105275644/sendMessage/e78fc9fbe0924191a976341e80a8edc377b46def788845fca8","message":"Validation failed. Details: 'chatId' must be a string"}
+2025-07-10 04:16:59,827 - ERROR - ✗ Failed to send WhatsApp report to group
+2025-07-10 04:17:00,725 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:17:10,054 - ERROR -      X REGIONAL 6 - Gagal kirim (Telegram: True, Email: True)
+2025-07-10 04:17:10,055 - INFO -      Processing REGIONAL 5...
+2025-07-10 04:17:10,959 - INFO - Telegram message sent successfully
+2025-07-10 04:17:12,464 - ERROR - WhatsApp API error: 400 - {"statusCode":400,"timestamp":"2025-07-09T21:17:11.524Z","path":"/waInstance7105275644/sendMessage/e78fc9fbe0924191a976341e80a8edc377b46def788845fca8","message":"Validation failed. Details: 'chatId' must be a string"}
+2025-07-10 04:17:12,464 - ERROR - ✗ Failed to send WhatsApp report to group
+2025-07-10 04:17:13,320 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:17:14,270 - ERROR -      X REGIONAL 5 - Gagal kirim (Telegram: True, Email: True)
+2025-07-10 04:17:14,271 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-07-10 04:21:44,828 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:21:45,931 - INFO - Chat accessible: Ragil
+2025-07-10 04:22:34,704 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:22:35,517 - INFO - Chat accessible: Ragil
+2025-07-10 04:22:35,518 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:22:35,519 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:22:40,908 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:22:40,908 - INFO -    - Brand records: 21164
+2025-07-10 04:22:40,909 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:22:40,911 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:22:40,940 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:22:41,048 - INFO -    - Recipients: 2 email
+2025-07-10 04:22:41,049 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:22:41,063 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:22:46,309 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:22:46,320 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:22:46,321 - INFO -      Processing REGIONAL 1...
+2025-07-10 04:22:47,301 - INFO - Telegram message sent successfully
+2025-07-10 04:22:47,302 - ERROR -      X Error processing REGIONAL 1: 'WhatsAppService' object has no attribute 'send_regional_report'
+2025-07-10 04:22:47,305 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:22:48,370 - INFO - Telegram message sent successfully
+2025-07-10 04:22:48,371 - ERROR -      X Error processing REGIONAL 3: 'WhatsAppService' object has no attribute 'send_regional_report'
+2025-07-10 04:22:48,372 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:22:49,354 - INFO - Telegram message sent successfully
+2025-07-10 04:22:49,356 - ERROR -      X Error processing REGIONAL 4: 'WhatsAppService' object has no attribute 'send_regional_report'
+2025-07-10 04:22:49,356 - INFO -      Processing REGIONAL 2...
+2025-07-10 04:22:50,463 - INFO - Telegram message sent successfully
+2025-07-10 04:22:50,464 - ERROR -      X Error processing REGIONAL 2: 'WhatsAppService' object has no attribute 'send_regional_report'
+2025-07-10 04:22:50,464 - INFO -      Processing REGIONAL 6...
+2025-07-10 04:22:51,463 - INFO - Telegram message sent successfully
+2025-07-10 04:22:51,464 - ERROR -      X Error processing REGIONAL 6: 'WhatsAppService' object has no attribute 'send_regional_report'
+2025-07-10 04:22:51,465 - INFO -      Processing REGIONAL 5...
+2025-07-10 04:22:52,466 - INFO - Telegram message sent successfully
+2025-07-10 04:22:52,468 - ERROR -      X Error processing REGIONAL 5: 'WhatsAppService' object has no attribute 'send_regional_report'
+2025-07-10 04:22:52,468 - INFO - === Proses selesai. Total laporan berhasil dikirim: 0 ===
+2025-07-10 04:24:53,666 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:24:54,797 - INFO - Chat accessible: Ragil
+2025-07-10 04:24:54,799 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:24:54,800 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:25:00,232 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:25:00,233 - INFO -    - Brand records: 21164
+2025-07-10 04:25:00,234 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:25:00,239 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:25:00,239 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:25:00,345 - INFO -    - Recipients: 2 email
+2025-07-10 04:25:00,345 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:25:00,366 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:25:05,514 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:25:05,524 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:25:05,525 - INFO -      Processing REGIONAL 2...
+2025-07-10 04:25:06,688 - INFO - Telegram message sent successfully
+2025-07-10 04:25:08,144 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:25:08,146 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:25:08,848 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:25:18,680 - INFO -      ✓ REGIONAL 2 - Berhasil kirim Telegram & Email
+2025-07-10 04:25:18,681 - INFO -         - Existing: 3,949.6 BOX
+2025-07-10 04:25:18,682 - INFO -         - New Brand: 4,713.1 BOX
+2025-07-10 04:25:18,682 - INFO -         - Achievement: 82.6%
+2025-07-10 04:25:18,683 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:25:19,588 - INFO - Telegram message sent successfully
+2025-07-10 04:25:21,250 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:25:21,252 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:25:21,881 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:25:22,649 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-10 04:25:22,650 - INFO -         - Existing: 4,412.0 BOX
+2025-07-10 04:25:22,650 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-10 04:25:22,651 - INFO -         - Achievement: 98.9%
+2025-07-10 04:25:22,652 - INFO -      Processing REGIONAL 1...
+2025-07-10 04:25:23,782 - INFO - Telegram message sent successfully
+2025-07-10 04:25:25,461 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:25:25,462 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:25:26,215 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:25:37,175 - INFO -      ✓ REGIONAL 1 - Berhasil kirim Telegram & Email
+2025-07-10 04:25:37,176 - INFO -         - Existing: 3,662.9 BOX
+2025-07-10 04:25:37,176 - INFO -         - New Brand: 137.3 BOX
+2025-07-10 04:25:37,176 - INFO -         - Achievement: 90.0%
+2025-07-10 04:25:37,177 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:25:38,159 - INFO - Telegram message sent successfully
+2025-07-10 04:25:39,656 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:25:39,657 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:25:40,566 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:25:41,361 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-10 04:25:41,362 - INFO -         - Existing: 4,070.9 BOX
+2025-07-10 04:25:41,363 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-10 04:25:41,363 - INFO -         - Achievement: 137.6%
+2025-07-10 04:25:41,364 - INFO -      Processing REGIONAL 6...
+2025-07-10 04:25:42,292 - INFO - Telegram message sent successfully
+2025-07-10 04:25:43,870 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:25:43,872 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:25:44,744 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:25:55,826 - INFO -      ✓ REGIONAL 6 - Berhasil kirim Telegram & Email
+2025-07-10 04:25:55,827 - INFO -         - Existing: 4,001.2 BOX
+2025-07-10 04:25:55,827 - INFO -         - New Brand: 3,658.5 BOX
+2025-07-10 04:25:55,827 - INFO -         - Achievement: 99.8%
+2025-07-10 04:25:55,828 - INFO -      Processing REGIONAL 5...
+2025-07-10 04:25:57,006 - INFO - Telegram message sent successfully
+2025-07-10 04:25:58,638 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:25:58,639 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:25:59,504 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:26:00,728 - INFO -      ✓ REGIONAL 5 - Berhasil kirim Telegram & Email
+2025-07-10 04:26:00,729 - INFO -         - Existing: 1,070.5 BOX
+2025-07-10 04:26:00,729 - INFO -         - New Brand: 141.3 BOX
+2025-07-10 04:26:00,729 - INFO -         - Achievement: 88.7%
+2025-07-10 04:26:00,730 - INFO - === Proses selesai. Total laporan berhasil dikirim: 6 ===
+2025-07-10 04:32:31,989 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:32:32,846 - INFO - Chat accessible: Ragil
+2025-07-10 04:32:32,878 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:32:32,879 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:32:38,623 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:32:38,623 - INFO -    - Brand records: 21164
+2025-07-10 04:32:38,625 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:32:38,630 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:32:38,630 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:32:38,734 - INFO -    - Recipients: 2 email
+2025-07-10 04:32:38,735 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:32:38,754 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:32:43,887 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:32:43,900 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:32:43,900 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:32:45,045 - INFO - Telegram message sent successfully
+2025-07-10 04:32:46,630 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:32:46,632 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:32:47,567 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:32:56,472 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-10 04:32:56,473 - INFO -         - Existing: 4,070.9 BOX
+2025-07-10 04:32:56,475 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-10 04:32:56,475 - INFO -         - Achievement: 137.6%
+2025-07-10 04:32:56,476 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:32:57,508 - INFO - Telegram message sent successfully
+2025-07-10 04:32:59,091 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:32:59,092 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:32:59,928 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:33:01,132 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-10 04:33:01,133 - INFO -         - Existing: 4,412.0 BOX
+2025-07-10 04:33:01,133 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-10 04:33:01,134 - INFO -         - Achievement: 98.9%
+2025-07-10 04:33:01,135 - INFO -      Processing REGIONAL 1...
+2025-07-10 04:33:02,218 - INFO - Telegram message sent successfully
+2025-07-10 04:33:03,723 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:33:03,725 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:33:04,627 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:36:28,548 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:36:29,551 - INFO - Chat accessible: Ragil
+2025-07-10 04:36:29,552 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:36:29,554 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:36:34,952 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:36:34,953 - INFO -    - Brand records: 21164
+2025-07-10 04:36:34,953 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:36:34,958 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:36:34,958 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:36:35,088 - INFO -    - Recipients: 2 email
+2025-07-10 04:36:35,090 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:36:35,106 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:36:40,416 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:36:40,426 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:36:40,426 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:36:41,594 - INFO - Telegram message sent successfully
+2025-07-10 04:36:43,158 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:36:43,159 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:36:44,033 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:36:52,222 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-10 04:36:52,223 - INFO -         - Existing: 4,412.0 BOX
+2025-07-10 04:36:52,223 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-10 04:36:52,224 - INFO -         - Achievement: 98.9%
+2025-07-10 04:36:52,224 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:36:53,335 - INFO - Telegram message sent successfully
+2025-07-10 04:36:54,839 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:36:54,840 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:36:55,749 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:36:56,752 - INFO -      ✓ REGIONAL 4 - Berhasil kirim Telegram & Email
+2025-07-10 04:36:56,753 - INFO -         - Existing: 4,070.9 BOX
+2025-07-10 04:36:56,754 - INFO -         - New Brand: 1,796.4 BOX
+2025-07-10 04:36:56,754 - INFO -         - Achievement: 137.6%
+2025-07-10 04:36:56,755 - INFO -      Processing REGIONAL 1...
+2025-07-10 04:36:57,751 - INFO - Telegram message sent successfully
+2025-07-10 04:36:59,356 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:36:59,357 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:37:00,023 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:37:54,854 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:37:55,847 - INFO - Chat accessible: Ragil
+2025-07-10 04:37:55,850 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:37:55,852 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:38:01,303 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:38:01,305 - INFO -    - Brand records: 21164
+2025-07-10 04:38:01,305 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:38:01,310 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:38:01,311 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:38:01,403 - INFO -    - Recipients: 2 email
+2025-07-10 04:38:01,403 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:38:01,422 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:38:06,667 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:38:06,674 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:38:06,675 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:38:07,599 - INFO - Telegram message sent successfully
+2025-07-10 04:38:09,203 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:38:09,204 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:38:09,972 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:38:21,016 - INFO -      ✓ REGIONAL 3 - Berhasil kirim Telegram & Email
+2025-07-10 04:38:21,017 - INFO -         - Existing: 4,412.0 BOX
+2025-07-10 04:38:21,017 - INFO -         - New Brand: 4,245.4 BOX
+2025-07-10 04:38:21,018 - INFO -         - Achievement: 98.9%
+2025-07-10 04:38:21,018 - INFO -      Processing REGIONAL 4...
+2025-07-10 04:40:07,823 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:40:08,926 - INFO - Chat accessible: Ragil
+2025-07-10 04:40:08,926 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:40:08,927 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:40:14,483 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:40:14,483 - INFO -    - Brand records: 21164
+2025-07-10 04:40:14,515 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:40:14,520 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:40:14,521 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:40:14,607 - INFO -    - Recipients: 2 email
+2025-07-10 04:40:14,608 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:40:14,621 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:40:19,788 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:40:19,797 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:40:19,798 - INFO -      Processing REGIONAL 3...
+2025-07-10 04:40:20,985 - INFO - Telegram message sent successfully
+2025-07-10 04:40:22,460 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:40:22,462 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:40:23,177 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
+2025-07-10 04:42:21,251 - INFO - Bot connected: @SAPSupportbot
+2025-07-10 04:42:22,158 - INFO - Chat accessible: Ragil
+2025-07-10 04:42:22,160 - INFO - === Memulai proses report untuk tanggal: 2025-06-21 ===
+2025-07-10 04:42:22,160 - INFO - 1. Mengambil data dari SAP...
+2025-07-10 04:42:27,645 - INFO -    - ZPSDT003 records: 676
+2025-07-10 04:42:27,647 - INFO -    - Brand records: 21164
+2025-07-10 04:42:27,647 - INFO - 2. Mencari data ZPSDT003 yang sesuai...
+2025-07-10 04:42:27,650 - INFO -    - Ditemukan 1 data yang cocok
+2025-07-10 04:42:27,650 - INFO - 3. Mengambil daftar penerima...
+2025-07-10 04:42:27,740 - INFO -    - Recipients: 2 email
+2025-07-10 04:42:27,741 - INFO - 4. Memproses Cycle 6, Year 2025, Week 4
+2025-07-10 04:42:27,758 - INFO -    - Ditemukan 7473 brand data
+2025-07-10 04:42:32,979 - INFO -    - Previous week data: 5454 records
+2025-07-10 04:42:32,991 - INFO -    - Dikelompokkan menjadi 6 regional
+2025-07-10 04:42:32,992 - INFO -      Processing REGIONAL 1...
+2025-07-10 04:42:34,038 - INFO - Telegram message sent successfully
+2025-07-10 04:42:35,624 - INFO - WhatsApp message sent successfully to 120363161989143908@g.us
+2025-07-10 04:42:35,625 - INFO - ✓ WhatsApp report sent to group: 120363161989143908@g.us
+2025-07-10 04:42:36,249 - ERROR - Telegram HTTP error: 400 - {"ok":false,"error_code":400,"description":"Bad Request: text must be non-empty"}
