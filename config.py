@@ -13,7 +13,7 @@ SAP_USERNAME_ZPSDT003 = "wim-rfc"
 SAP_PASSWORD_ZPSDT003 = "Initial@999@"
 
 # SAP_API_URL = f"https://saphana-whp.wismilak.com:53000/sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_CDS/ZCDSV_SD_RMWEEKLY_SUM(p_date=datetime'{CURRENT_DATE}T00:00:00',p_target_unit='{SATUAN}')/Set?sap-client=350&$format=json"
-SAP_API_URL = f"https://gajahmada.wismilak.com/sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_CDS/ZCDSV_SD_RMWEEKLY_SUM(p_date=datetime'{CURRENT_DATE}T00:00:00',p_target_unit='{SATUAN}')/Set?$format=json"
+SAP_API_URL = f"https://gajahmada.wismilak.com/sap/opu/odata/sap/ZCDSV_SD_RMWEEKLY_SUM_AE_CDS/ZCDSV_SD_RMWEEKLY_SUM_AE(p_date=datetime'{CURRENT_DATE}T00:00:00',p_target_unit='{SATUAN}')/Set?$format=json"
 SAP_USERNAME = "wim-rfc"
 SAP_PASSWORD = "Initial@999@"
 
@@ -26,7 +26,12 @@ EMAIL_FROM = "noreply@wismilak.com"
 
 # Telegram Configuration
 TELEGRAM_BOT_TOKEN = "8180858435:AAH3du51mPkqmk_IvJX-uK-KYvZ4uzPnrNQ"
-TELEGRAM_CHAT_ID = "-4987830811"  # Replace with your actual chat ID
+# TELEGRAM_CHAT_ID = "-4987830811" #group
+TELEGRAM_CHAT_ID = "1081601567" #pribadi
+
+# WhatsApp Green API configuration
+GREEN_API_INSTANCE_ID = "7105275644"  # Your Green API instance ID
+GREEN_API_ACCESS_TOKEN = "e78fc9fbe0924191a976341e80a8edc377b46def788845fca8"  # Your Green API access token
 
 # Database Configuration
 DB_CONFIG = {
@@ -34,4 +39,14 @@ DB_CONFIG = {
     'user': 'root',
     'password': '',
     'database': 'grafik_v3'
+}
+
+# Report configuration
+REPORT_CONFIG = {
+    'max_retries': 3,
+    'retry_delay': 5,  # seconds
+    'timeout': 30,     # seconds
+    'enable_telegram': True,
+    'enable_email': True,
+    'enable_whatsapp': True
 }

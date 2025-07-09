@@ -23,7 +23,7 @@ class DatabaseService:
             logging.error(f"Error getting recipients from database: {e}")
             return ["ragil.bapolki@wismilak.com"]
     
-    def get_regional_notes(self, regional_id, cycle, week, year):
+    def get_regional_notes(self, vkbur, cycle, week, year):
         """
         Mengambil notes untuk regional tertentu dari database dengan query yang lebih fleksibel
         """
@@ -34,20 +34,20 @@ class DatabaseService:
             # Query dengan prioritas - coba exact match dulu
             queries_to_try = [
                 # 1. Exact match
-                ("SELECT note FROM note_customers WHERE regional_id = %s AND cycle = %s AND week = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
-                (regional_id, cycle, week, year)),
+                ("SELECT note FROM note_customers WHERE vkbur = %s AND cycle = %s AND week = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
+                (vkbur, cycle, week, year)),
                 
                 # 2. Tanpa week (mungkin week tidak sesuai)
-                ("SELECT note FROM note_customers WHERE regional_id = %s AND cycle = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
-                (regional_id, cycle, year)),
+                ("SELECT note FROM note_customers WHERE vkbur = %s AND cycle = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
+                (vkbur, cycle, year)),
                 
-                # 3. Hanya regional_id dan year (paling fleksibel)
-                ("SELECT note FROM note_customers WHERE regional_id = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
-                (regional_id, year)),
+                # 3. Hanya vkbur dan year (paling fleksibel)
+                ("SELECT note FROM note_customers WHERE vkbur = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
+                (vkbur, year)),
                 
-                # 4. Regional_id sebagai string (jika ada masalah tipe data)
-                ("SELECT note FROM note_customers WHERE regional_id = %s AND cycle = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
-                (str(regional_id), str(cycle), str(year))),
+                # 4. vkbur sebagai string (jika ada masalah tipe data)
+                ("SELECT note FROM note_customers WHERE vkbur = %s AND cycle = %s AND year = %s ORDER BY created_at DESC LIMIT 1", 
+                (str(vkbur), str(cycle), str(year))),
             ]
             
             result = None
