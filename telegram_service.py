@@ -155,6 +155,19 @@ class TelegramService:
        
         return self.send_message(summary_message)
 
+    # ADD THIS METHOD - Missing method that your main app is looking for
+    def send_national_message(self, message):
+        """
+        Send national report message to Telegram
+        This is the method your main application is trying to call
+        """
+        try:
+            logging.info("Sending national report to Telegram...")
+            return self.send_message(message)
+        except Exception as e:
+            logging.error(f"Error sending national Telegram message: {e}")
+            return False
+
     def get_chat_id_from_updates(self):
         """
         Helper method to get chat ID from recent messages
