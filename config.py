@@ -36,10 +36,10 @@ GREEN_API_ACCESS_TOKEN = "e78fc9fbe0924191a976341e80a8edc377b46def788845fca8"  #
 
 # Database Configuration
 DB_CONFIG = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': '',
-    'database': 'grafik_v3'
+    host='localhost',
+    user='admin1',
+    password='wismilak',
+    database='grafik_v3'
 }
 
 # Report configuration
