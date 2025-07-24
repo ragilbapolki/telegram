@@ -236,7 +236,6 @@ class RegionalReportPDFGenerator:
 
         previous_week = str(int(current_week) - 1) if int(current_week) > 1 else '0'
 
-        # Brand Performance Tables for each category3
         for category3 in sorted(category3_groups.keys()):
             brands = category3_groups[category3]
             
