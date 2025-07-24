@@ -3,7 +3,7 @@ Database Manager for handling all database operations
 """
 import mysql.connector
 import logging
-from config import DB_CONFIG, DEFAULT_RECIPIENTS
+from config import DB_CONFIG
 
 class DatabaseManager:
     def __init__(self):
@@ -111,12 +111,54 @@ class DatabaseManager:
             cursor.close()
             connection.close()
             
-            print("\n=== DEBUG: Recent notes in database ===")
-            for row in results:
-                print(f"Regional: {row[0]}, Cycle: {row[1]}, Week: {row[2]}, Year: {row[3]}")
-                print(f"Note: {row[4]}")
-                print(f"Created: {row[5]}")
-                print("-" * 50)
+            return results
+            
+        except Exception as e:
+            logging.error(f"Error getting debug notes: {e}")
+            print(f"Error getting debug notes: {e}")
+            return []
+        
+    def get_brand_orders(self):
+        """
+        Debug method to see all notes in database
+        """
+        try:
+            connection = self.get_connection()
+            cursor = connection.cursor()
+            
+            query = """
+            SELECT matkl_parent, matkl, matkl_desc, `order`
+            FROM brand_orders 
+            """
+            
+            cursor.execute(query)
+            results = cursor.fetchall()
+            
+            cursor.close()
+            connection.close()
+            
+            return results
+            
+        except Exception as e:
+            logging.error(f"Error getting debug notes: {e}")
+            print(f"Error getting debug notes: {e}")
+            return []
+        
+    def get_regional_mapping(self):
+        try:
+            connection = self.get_connection()
+            cursor = connection.cursor()
+            
+            query = """
+            SELECT original_regional_desc, merged_regional_desc,  `order`
+            FROM regional_mapping 
+            """
+            
+            cursor.execute(query)
+            results = cursor.fetchall()
+            
+            cursor.close()
+            connection.close()
             
             return results
             

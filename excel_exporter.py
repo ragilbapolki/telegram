@@ -153,9 +153,6 @@ def example_direct_summary_processing():
     regional_summary = summary_processor.create_summary_with_regional(sample_merged_brands)
     non_regional_summary = summary_processor.create_summary_without_regional(sample_merged_brands)
     
-    print(f"✓ Regional summary: {len(regional_summary)} records")
-    print(f"✓ Non-regional summary: {len(non_regional_summary)} records")
-    
     # Export to Excel
     excel_file = excel_exporter.export_summaries_to_excel(
         regional_summary, non_regional_summary, '2024', '2'

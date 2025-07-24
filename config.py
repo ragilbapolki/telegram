@@ -3,7 +3,8 @@ import os
 from datetime import datetime
 
 # Date Configuration
-CURRENT_DATE = '2025-07-12'
+# CURRENT_DATE = '2025-07-19'
+CURRENT_DATE = '2025-06-28'
 # CURRENT_DATE = datetime.now().strftime('%Y-%m-%d')
 SATUAN = 'BOX'
 
@@ -31,15 +32,17 @@ TELEGRAM_BOT_TOKEN = "8180858435:AAH3du51mPkqmk_IvJX-uK-KYvZ4uzPnrNQ"
 TELEGRAM_CHAT_ID = "1081601567" #pribadi
 
 # WhatsApp Green API configuration
-GREEN_API_INSTANCE_ID = "7105275644"  # Your Green API instance ID
-GREEN_API_ACCESS_TOKEN = "e78fc9fbe0924191a976341e80a8edc377b46def788845fca8"  # Your Green API access token
+GREEN_API_INSTANCE_ID = "7105275644"  # Pribadi
+GREEN_API_INSTANCE_ID = "7105286344"  # Kantor
+# GREEN_API_ACCESS_TOKEN = "e78fc9fbe0924191a976341e80a8edc377b46def788845fca8"  # pribadi
+GREEN_API_ACCESS_TOKEN = "db34e27e08244ddeac4b9f3899ec884aae45b88d8c8949d99c"  # Kantor
 
 # Database Configuration
 DB_CONFIG = {
-    host='localhost',
-    user='admin1',
-    password='wismilak',
-    database='grafik_v3'
+    'host': 'localhost',
+    'user': 'root',
+    'password': '',
+    'database': 'grafik_v3'
 }
 
 # Report configuration
