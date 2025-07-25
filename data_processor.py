@@ -177,8 +177,60 @@ class DataProcessor:
             if not matching_brands:
                 logging.warning("Tidak ada data matching brands untuk dimerge.")
                 return []
+            
             # Export analysis before merger
             analysis_result = self.export_matching_brands_analysis(matching_brands)
+
+            # Get brand orders from database for enhancement
+            order_lookup = {}
+            if self.db_manager:
+                try:
+                    brand_orders = self.db_manager.get_brand_orders()
+                    
+                    for i, brand_order in enumerate(brand_orders):
+                        if isinstance(brand_order, tuple):
+                            if len(brand_order) >= 2:
+                                matkl = str(brand_order[1]) if brand_order[1] is not None else ''  # matkl is at index 1
+                                
+                                order_value = 111  # default
+                                
+                                for idx in [0, 3, 4, 5]:  # Check common positions for order field
+                                    if idx < len(brand_order) and brand_order[idx] is not None:
+                                        try:
+                                            potential_order = int(brand_order[idx])
+                                            if 1 <= potential_order <= 999:  # Reasonable order range
+                                                order_value = potential_order
+                                                if i < 3:
+                                                    logging.info(f"DEBUG: Found order {order_value} at index {idx}")
+                                                break
+                                        except (ValueError, TypeError):
+                                            continue
+                                
+                            else:
+                                logging.warning(f"DEBUG: Unexpected tuple length: {len(brand_order)}")
+                                continue
+                        elif isinstance(brand_order, dict):
+                            # Dictionary format
+                            matkl = str(brand_order.get('matkl', ''))
+                            order_value = brand_order.get('order', 111)
+                        else:
+                            logging.warning(f"DEBUG: Unexpected brand_order type: {type(brand_order)}")
+                            continue
+                        
+                        if matkl:  # Only add if matkl is not empty
+                            order_lookup[matkl] = order_value
+                            
+                            if len(order_lookup) <= 5:
+                                logging.info(f"DEBUG: Added to lookup - matkl: '{matkl}' -> order: {order_value}")
+                    
+                    
+                    sample_keys = list(order_lookup.keys())[:5]
+                    logging.info(f"DEBUG: Sample lookup keys: {sample_keys}")
+                    
+                except Exception as e:
+                    logging.error(f"DEBUG: Exception details: {str(e)}")
+            else:
+                logging.warning("Database manager tidak tersedia untuk brand orders.")
 
             grouped_data = {}
 
@@ -196,7 +248,7 @@ class DataProcessor:
 
                 grouped_data[match_key][source].append(brand)
 
-            # Merge data with aggregation
+            # Merge data with aggregation and brand orders enhancement
             merged_data = []
             merge_stats = {
                 'total_groups': len(grouped_data),
@@ -204,9 +256,12 @@ class DataProcessor:
                 'p_only_records': 0,
                 't_only_records': 0,
                 'successful_matches': 0,
-                'failed_matches': 0
+                'failed_matches': 0,
+                'enhanced_with_orders': 0,
+                'default_orders_used': 0
             }
 
+            debug_counter = 0
             for match_key, group_data in grouped_data.items():
                 p_records = group_data['P']
                 t_records = group_data['T']
@@ -230,6 +285,27 @@ class DataProcessor:
                     'qty_target_ae': qty_target_ae,
                     'merge_match_key': match_key_str
                 }
+
+                # DEBUG: Enhanced brand order lookup with detailed logging
+                debug_counter += 1
+                if debug_counter <= 5:  # Only log first 5 records
+                    logging.info(f"DEBUG Record {debug_counter}: Looking up matkl='{matkl}'")
+                    logging.info(f"DEBUG Record {debug_counter}: matkl type = {type(matkl)}")
+                    logging.info(f"DEBUG Record {debug_counter}: matkl in lookup? {matkl in order_lookup}")
+                    if matkl in order_lookup:
+                        logging.info(f"DEBUG Record {debug_counter}: Found order = {order_lookup[matkl]}")
+                    else:
+                        # Check if there are similar keys
+                        similar_keys = [k for k in order_lookup.keys() if matkl.lower() in k.lower() or k.lower() in matkl.lower()]
+                        logging.info(f"DEBUG Record {debug_counter}: Similar keys found: {similar_keys[:3]}")
+
+                brand_order = order_lookup.get(matkl, 222)  # Default 222 if not found
+                merged_record['order'] = brand_order
+                
+                if brand_order != 222:  # If found in brand orders
+                    merge_stats['enhanced_with_orders'] += 1
+                else:
+                    merge_stats['default_orders_used'] += 1
 
                 sample_record = p_records[0] if p_records else t_records[0]
                 for key, value in sample_record.items():
@@ -259,12 +335,9 @@ class DataProcessor:
 
                 merged_data.append(merged_record)
 
-            # merged_filepath = self.export_to_excel(merged_data, "02_merged_data", "Merged_Data")
-            # if merged_filepath:
-            #     logging.info(f"✓ Merged data exported to: {merged_filepath}")
-            #     logging.info(f"  - Merge stats: {merge_stats}")
-            #     logging.info(f"  - Total output records: {len(merged_data)}")
-            #     logging.info(f"  - Match success rate: {merge_stats['successful_matches']}/{merge_stats['successful_matches'] + merge_stats['failed_matches']} groups")
+            merged_filepath = self.export_to_excel(merged_data, "02_merged_enhanced_data", "Merged_Enhanced_Data")
+            if merged_filepath:
+                logging.info(f"  - Match success rate: {merge_stats['successful_matches']}/{merge_stats['successful_matches'] + merge_stats['failed_matches']} groups")
 
             return merged_data
 
@@ -846,9 +919,6 @@ class DataProcessor:
             return []
 
     def export_all_results(self, results):
-        """
-        Export all results to a single Excel file with multiple sheets
-        """
         try:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"06_complete_results_{timestamp}.xlsx"

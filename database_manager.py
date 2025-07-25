@@ -119,9 +119,6 @@ class DatabaseManager:
             return []
         
     def get_brand_orders(self):
-        """
-        Debug method to see all notes in database
-        """
         try:
             connection = self.get_connection()
             cursor = connection.cursor()

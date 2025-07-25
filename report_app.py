@@ -76,34 +76,54 @@ class ReportApp:
         try:
             zpsdt003_data = self.sap_service.load_zpsdt003_data()
             brand_data = self.sap_service.load_brand_data()
+            
             if not zpsdt003_data or not brand_data:
                 return False
+            
+            # Filter brand_data untuk category1 = 'GD' saja
+            filtered_brand_data = [
+                brand for brand in brand_data 
+                if brand.get('category1') == 'GD'
+            ]
+            
+            # Jika tidak ada data setelah filtering, return False
+            if not filtered_brand_data:
+                return False
+                
             matching_zpsdt003 = self._get_matching_zpsdt003(zpsdt003_data)
             if not matching_zpsdt003:
                 return False
+                
             national_reports_sent = 0
             regional_reports_sent = 0
+            
             for zpsdt_data in matching_zpsdt003:
                 cycle_year = str(zpsdt_data['cycle_year'])
                 cycle = str(zpsdt_data['cycle'])
                 current_week2 = int(zpsdt_data.get('week2', 3))
                 current_week = int(zpsdt_data.get('week1', 3))
-                merged_brands = self.data_processor.merge_matching_brands_data(brand_data)
+                
+                # Gunakan filtered_brand_data instead of brand_data
+                merged_brands = self.data_processor.merge_matching_brands_data(filtered_brand_data)
+                
                 if merged_brands:
                     national_success = self._send_national_report(
                         merged_brands, cycle_year, cycle, current_week, current_week2
                     )
                     if national_success:
                         national_reports_sent += 1
+                        
                     regional_success = self._send_regional_reports(
                         merged_brands, cycle_year, cycle, current_week, current_week2
                     )
                     if regional_success:
                         regional_reports_sent += 1
+                        
             return True
+            
         except Exception as e:
             return False
-
+    
     def _get_matching_zpsdt003(self, zpsdt003_data):
         matching_zpsdt003 = []
         current_date = datetime.strptime(CURRENT_DATE, '%Y-%m-%d')
@@ -136,8 +156,8 @@ class ReportApp:
         #     matching_brands, cycle_year, cycle, 
         #     f"original_matching_brands_{cycle_year}_{cycle}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
         # )
-        if original_excel_file:
-            logging.info(f"Original matching brands exported to: {original_excel_file}")
+        # if original_excel_file:
+        #     logging.info(f"Original matching brands exported to: {original_excel_file}")
         
         # Export summary data
         summary_excel_file = self.export_manager.export_summary_to_excel(merged_brands, cycle_year, cycle)
