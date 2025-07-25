@@ -613,10 +613,10 @@ class ReportGenerator:
             total_diff = total_tw - total_lw
             total_diff_str = f"{total_diff:3.0f}" if total_diff >= 0 else f"{total_diff:4.0f}"
             
-            report_lines.append("─" * 26)
-            report_lines.append(f"{'TOTAL':<6}:{total_tw:>6.1f}|{total_lw:>6.1f}|{total_diff_str:>5s}|{total_percentage:>3.0f}%")
+            # report_lines.append("─" * 26)
+            # report_lines.append(f"{'TOTAL':<6}:{total_tw:>6.1f}|{total_lw:>6.1f}|{total_diff_str:>5s}|{total_percentage:>3.0f}%")
             report_lines.append("```")
-            report_lines.append("")
+            # report_lines.append("")
 
             if categories_displayed == 0:
                 report_lines.append("❌ Tidak ada data kategori yang dapat ditampilkan.")
@@ -999,7 +999,6 @@ class ReportGenerator:
             report_lines.append(f"📋 {result_regional_name.upper()}")
             report_lines.append(f"📅 Cy {current_cycle_to_use} {cycle_year} week {current_week_to_use} omset ideal {omset_ideal_percentage:.0f}% vs FUF")
             report_lines.append("```")
-            
             report_lines.append("```")
             report_lines.append(f"CATEGORY TW | LW | +/- | ACH%")
             report_lines.append("─" * 26)
@@ -1031,10 +1030,10 @@ class ReportGenerator:
             total_diff = total_tw - total_lw
             total_diff_str = f"{total_diff:3.0f}" if total_diff >= 0 else f"{total_diff:4.0f}"
             
-            report_lines.append("─" * 26)
-            report_lines.append(f"{'TOTAL':<6}:{total_tw:>6.1f}|{total_lw:>6.1f}|{total_diff_str:>5s}|{total_percentage:>3.0f}%")
+            # report_lines.append("─" * 26)
+            # report_lines.append(f"{'TOTAL':<6}:{total_tw:>6.1f}|{total_lw:>6.1f}|{total_diff_str:>5s}|{total_percentage:>3.0f}%")
             report_lines.append("```")
-            report_lines.append("")
+            # report_lines.append("")
             
             if categories_displayed == 0:
                 report_lines.append("❌ Tidak ada data kategori yang dapat ditampilkan.")
