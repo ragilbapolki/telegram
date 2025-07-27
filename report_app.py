@@ -57,7 +57,7 @@ class ReportApp:
                     continue
 
                 # Merge brands data
-                merged_brands = self.data_processor.merge_matching_brands_data(matching_brands)
+                merged_brands = self.data_processor.merge_matching_brands_data(matching_brands, cycle_year)
                 
                 # if merged_brands:
                     # Export all data
@@ -104,7 +104,7 @@ class ReportApp:
                 current_week = int(zpsdt_data.get('week1', 3))
                 
                 # Gunakan filtered_brand_data instead of brand_data
-                merged_brands = self.data_processor.merge_matching_brands_data(filtered_brand_data)
+                merged_brands = self.data_processor.merge_matching_brands_data(filtered_brand_data, cycle_year)
                 
                 if merged_brands:
                     national_success = self._send_national_report(

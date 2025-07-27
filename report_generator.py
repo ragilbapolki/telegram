@@ -318,9 +318,12 @@ class ReportGenerator:
 
             omset_ideal_percentage = (current_week2 / 4 * 100)
             
-            def safe_float(value):
+            def safe_float(value, decimals=2):
                 try:
-                    return float(value) if value is not None else 0.0
+                    if value is None:
+                        return 0.0
+                    result = float(value)
+                    return round(result, decimals)  # Bulatkan untuk konsistensi
                 except (ValueError, TypeError):
                     return 0.0
             
@@ -346,6 +349,7 @@ class ReportGenerator:
                     'cycle': item_cycle,
                     'week': item_week
                 })
+            
             current_week_str = str(current_week)
             current_week2_str = str(current_week2)
             cycle_str = str(cycle)
@@ -472,16 +476,21 @@ class ReportGenerator:
                         'category2': item.get('category2'),
                         'category3': item.get('category3'),
                         'order': item.get('order', 0),
-                        'processed_targets': set()
+                        'processed_billing': set()  # Hanya untuk billing anti-duplikasi
                     }
                 
-                target_key = f"{cycle_item}_{week}_{category5}"
-                if cycle_item == current_cycle_to_use and target_value > 0 and target_key not in category5_summary[category5]['processed_targets']:
+                # PERBAIKAN: Target langsung diakumulasi tanpa anti-duplikasi
+                # Karena multiple records dengan cycle-week-brand sama harus dijumlahkan targetnya
+                if cycle_item == current_cycle_to_use and target_value > 0:
                     category5_summary[category5]['qty_target_ae'] += target_value
-                    category5_summary[category5]['processed_targets'].add(target_key)
+                    logging.debug(f"DEBUG: Adding target {target_value} for {category5} (cycle:{cycle_item}, week:{week})")
+                    logging.debug(f"DEBUG: Current total target for {category5}: {category5_summary[category5]['qty_target_ae']}")
                 
-                if cycle_item == current_cycle_to_use:
+                # Billing tetap pakai anti-duplikasi dengan key yang lebih spesifik
+                billing_key = f"{cycle_item}_{week}_{category5}_{processed_items}"
+                if cycle_item == current_cycle_to_use and billing_key not in category5_summary[category5]['processed_billing']:
                     category5_summary[category5]['qty_billing_sum'] += billing_value
+                    category5_summary[category5]['processed_billing'].add(billing_key)
                 
                 cycle_week_key = f"{cycle_item}_{week}"
                 
@@ -653,7 +662,12 @@ class ReportGenerator:
                         diff_str = f"{difference:3.0f}" if difference >= 0 else f"{difference:4.0f}"
                         ach_percentage = (data['qty_billing_sum'] / data['qty_target_ae'] * 100) if data['qty_target_ae'] > 0 else 0
                         brand_name = (category5[:10] + "..") if len(category5) > 10 else category5
-                        report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>5s}|{ach_percentage:>3.0f}%")
+                        
+                        # DEBUG: Log target calculation untuk brand tertentu
+                        if category5 == 'DM16':
+                            logging.debug(f"DEBUG DM16: billing={data['qty_billing_sum']:.2f}, target={data['qty_target_ae']:.2f}, ach={ach_percentage:.1f}%")
+                        
+                        report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>4s}|{ach_percentage:>3.0f}%")
                     
                     report_lines.append("```")
                     report_lines.append("")

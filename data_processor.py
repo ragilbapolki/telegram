@@ -172,12 +172,22 @@ class DataProcessor:
             logging.error(f"Error in matching brands analysis: {e}")
             return None
 
-    def merge_matching_brands_data(self, matching_brands):
+    def merge_matching_brands_data(self, matching_brands, cycle_year):
         try:
             if not matching_brands:
                 logging.warning("Tidak ada data matching brands untuk dimerge.")
                 return []
             
+            # STEP 1: Export raw data awal untuk pengecekan
+            logging.info("STEP 1: Exporting raw matching brands data...")
+            raw_data_filepath = self.export_to_excel(
+                matching_brands, 
+                f"01_raw_data_{cycle_year}", 
+                f"Raw_Data_{cycle_year}"
+            )
+            if raw_data_filepath:
+                logging.info(f"Raw data exported to: {raw_data_filepath}")
+
             # Export analysis before merger
             analysis_result = self.export_matching_brands_analysis(matching_brands)
 
@@ -223,7 +233,6 @@ class DataProcessor:
                             if len(order_lookup) <= 5:
                                 logging.info(f"DEBUG: Added to lookup - matkl: '{matkl}' -> order: {order_value}")
                     
-                    
                     sample_keys = list(order_lookup.keys())[:5]
                     logging.info(f"DEBUG: Sample lookup keys: {sample_keys}")
                     
@@ -232,14 +241,38 @@ class DataProcessor:
             else:
                 logging.warning("Database manager tidak tersedia untuk brand orders.")
 
-            grouped_data = {}
-
+            # STEP 2: Filter and group data with cycle_year validation
+            logging.info(f"STEP 2: Filtering data for cycle_year: {cycle_year}")
+            
+            # Filter data berdasarkan cycle_year
+            filtered_brands = []
             for brand in matching_brands:
+                brand_cycle_year = str(brand.get('cycle_year', ''))
+                if brand_cycle_year == str(cycle_year):
+                    filtered_brands.append(brand)
+            
+            logging.info(f"Filtered {len(filtered_brands)} records from {len(matching_brands)} total records for cycle_year {cycle_year}")
+            
+            # Export filtered data
+            filtered_data_filepath = self.export_to_excel(
+                filtered_brands, 
+                f"02_filtered_data_{cycle_year}", 
+                f"Filtered_Data_{cycle_year}"
+            )
+            if filtered_data_filepath:
+                logging.info(f"Filtered data exported to: {filtered_data_filepath}")
+
+            # Group filtered data
+            grouped_data = {}
+            grouping_debug = []
+
+            for brand in filtered_brands:
                 source = str(brand.get('source', '')).upper()
                 matkl = str(brand.get('matkl', ''))
                 regional_desc = str(brand.get('regional_desc', ''))
                 cycle = str(brand.get('cycle', ''))
                 week = str(brand.get('week1', ''))  # jika field-nya bernama 'week1'
+                cycle_year_check = str(brand.get('cycle_year', ''))
 
                 match_key = (matkl, regional_desc, cycle, week)
 
@@ -247,8 +280,30 @@ class DataProcessor:
                     grouped_data[match_key] = {'P': [], 'T': []}
 
                 grouped_data[match_key][source].append(brand)
+                
+                # Debug info untuk grouping
+                if len(grouping_debug) < 10:  # Simpan 10 record pertama untuk debug
+                    grouping_debug.append({
+                        'source': source,
+                        'matkl': matkl,
+                        'regional_desc': regional_desc,
+                        'cycle': cycle,
+                        'week': week,
+                        'cycle_year': cycle_year_check,
+                        'match_key': f"{matkl}|{regional_desc}|{cycle}|{week}"
+                    })
 
-            # Merge data with aggregation and brand orders enhancement
+            # STEP 3: Export grouping debug info
+            grouping_debug_filepath = self.export_to_excel(
+                grouping_debug, 
+                f"03_grouping_debug_{cycle_year}", 
+                f"Grouping_Debug_{cycle_year}"
+            )
+            if grouping_debug_filepath:
+                logging.info(f"Grouping debug data exported to: {grouping_debug_filepath}")
+
+            # STEP 4: Merge data with aggregation and brand orders enhancement
+            logging.info("STEP 4: Merging grouped data...")
             merged_data = []
             merge_stats = {
                 'total_groups': len(grouped_data),
@@ -258,10 +313,13 @@ class DataProcessor:
                 'successful_matches': 0,
                 'failed_matches': 0,
                 'enhanced_with_orders': 0,
-                'default_orders_used': 0
+                'default_orders_used': 0,
+                'cycle_year_mismatches': 0
             }
 
+            pre_merge_debug = []
             debug_counter = 0
+            
             for match_key, group_data in grouped_data.items():
                 p_records = group_data['P']
                 t_records = group_data['T']
@@ -273,25 +331,56 @@ class DataProcessor:
                 if not p_records and not t_records:
                     continue
 
+                # PERBAIKAN: Filter qty_target_ae berdasarkan cycle_year yang sama
                 qty_billing_sum = sum(float(p.get('qty_billing_sum', 0) or 0) for p in p_records)
-                qty_target_ae = sum(float(t.get('qty_target_ae', 0) or 0) for t in t_records)
+                
+                # Filter T records berdasarkan cycle_year sebelum sum qty_target_ae
+                valid_t_records = []
+                for t_record in t_records:
+                    t_cycle_year = str(t_record.get('cycle_year', ''))
+                    if t_cycle_year == str(cycle_year):
+                        valid_t_records.append(t_record)
+                    else:
+                        merge_stats['cycle_year_mismatches'] += 1
+                        logging.warning(f"Cycle year mismatch: expected {cycle_year}, got {t_cycle_year} for matkl {matkl}")
+                
+                qty_target_ae = sum(float(t.get('qty_target_ae', 0) or 0) for t in valid_t_records)
 
                 merged_record = {
                     'matkl': matkl,
                     'regional_desc': regional_desc,
                     'cycle': cycle,
                     'week': week,
+                    'cycle_year': cycle_year,  # Tambahkan cycle_year ke merged record
                     'qty_billing_sum': qty_billing_sum,
                     'qty_target_ae': qty_target_ae,
-                    'merge_match_key': match_key_str
+                    'merge_match_key': match_key_str,
+                    'p_records_count': len(p_records),
+                    't_records_count': len(t_records),
+                    'valid_t_records_count': len(valid_t_records)  # Jumlah T records yang valid cycle_year
                 }
 
                 # DEBUG: Enhanced brand order lookup with detailed logging
                 debug_counter += 1
-                if debug_counter <= 5:  # Only log first 5 records
+                if debug_counter <= 10:  # Log 10 record pertama untuk debug
+                    pre_merge_debug.append({
+                        'debug_record_no': debug_counter,
+                        'matkl': matkl,
+                        'matkl_type': str(type(matkl)),
+                        'matkl_in_lookup': matkl in order_lookup,
+                        'p_records_count': len(p_records),
+                        't_records_count': len(t_records),
+                        'valid_t_records_count': len(valid_t_records),
+                        'qty_billing_sum': qty_billing_sum,
+                        'qty_target_ae': qty_target_ae,
+                        'cycle_year_filter': cycle_year
+                    })
+                    
                     logging.info(f"DEBUG Record {debug_counter}: Looking up matkl='{matkl}'")
                     logging.info(f"DEBUG Record {debug_counter}: matkl type = {type(matkl)}")
                     logging.info(f"DEBUG Record {debug_counter}: matkl in lookup? {matkl in order_lookup}")
+                    logging.info(f"DEBUG Record {debug_counter}: T records: total={len(t_records)}, valid={len(valid_t_records)}")
+                    
                     if matkl in order_lookup:
                         logging.info(f"DEBUG Record {debug_counter}: Found order = {order_lookup[matkl]}")
                     else:
@@ -307,26 +396,27 @@ class DataProcessor:
                 else:
                     merge_stats['default_orders_used'] += 1
 
-                sample_record = p_records[0] if p_records else t_records[0]
+                sample_record = p_records[0] if p_records else (valid_t_records[0] if valid_t_records else t_records[0])
                 for key, value in sample_record.items():
                     if key not in merged_record and key not in ['source', 'qty_billing_sum', 'qty_target_ae']:
                         merged_record[key] = value
 
-                if p_records and t_records:
+                # Update merge status logic untuk consider valid T records
+                if p_records and valid_t_records:
                     merged_record['merge_status'] = 'MERGED'
                     merged_record['merge_source_p'] = 'P'
                     merged_record['merge_source_t'] = 'T'
                     merge_stats['merged_records'] += 1
                     merge_stats['successful_matches'] += 1
 
-                elif p_records and not t_records:
+                elif p_records and not valid_t_records:
                     merged_record['merge_status'] = 'P_ONLY'
                     merged_record['merge_source_p'] = 'P'
-                    merged_record['merge_source_t'] = 'NOT_FOUND'
+                    merged_record['merge_source_t'] = 'NOT_FOUND' if not t_records else 'INVALID_CYCLE_YEAR'
                     merge_stats['p_only_records'] += 1
                     merge_stats['failed_matches'] += 1
 
-                elif t_records and not p_records:
+                elif valid_t_records and not p_records:
                     merged_record['merge_status'] = 'T_ONLY'
                     merged_record['merge_source_p'] = 'NOT_FOUND'
                     merged_record['merge_source_t'] = 'T'
@@ -335,14 +425,63 @@ class DataProcessor:
 
                 merged_data.append(merged_record)
 
-            merged_filepath = self.export_to_excel(merged_data, "02_merged_enhanced_data", "Merged_Enhanced_Data")
+            # STEP 5: Export pre-merge debug info
+            pre_merge_debug_filepath = self.export_to_excel(
+                pre_merge_debug, 
+                f"04_pre_merge_debug_{cycle_year}", 
+                f"Pre_Merge_Debug_{cycle_year}"
+            )
+            if pre_merge_debug_filepath:
+                logging.info(f"Pre-merge debug data exported to: {pre_merge_debug_filepath}")
+
+            # STEP 6: Export final merged data
+            merged_filepath = self.export_to_excel(
+                merged_data, 
+                f"05_final_merged_{cycle_year}", 
+                f"Final_Merged_Data_{cycle_year}"
+            )
             if merged_filepath:
+                logging.info(f"Final merged data exported to: {merged_filepath}")
+                logging.info(f"MERGE STATS for cycle_year {cycle_year}:")
+                logging.info(f"  - Total groups processed: {merge_stats['total_groups']}")
+                logging.info(f"  - Successful matches: {merge_stats['successful_matches']}")
+                logging.info(f"  - Failed matches: {merge_stats['failed_matches']}")
                 logging.info(f"  - Match success rate: {merge_stats['successful_matches']}/{merge_stats['successful_matches'] + merge_stats['failed_matches']} groups")
+                logging.info(f"  - Records with brand orders: {merge_stats['enhanced_with_orders']}")
+                logging.info(f"  - Records with default orders: {merge_stats['default_orders_used']}")
+                logging.info(f"  - Cycle year mismatches: {merge_stats['cycle_year_mismatches']}")
+
+            # STEP 7: Export merge statistics summary
+            merge_summary = [{
+                'cycle_year': cycle_year,
+                'raw_records_count': len(matching_brands),
+                'filtered_records_count': len(filtered_brands),
+                'total_groups': merge_stats['total_groups'],
+                'merged_records': merge_stats['merged_records'],
+                'p_only_records': merge_stats['p_only_records'],
+                't_only_records': merge_stats['t_only_records'],
+                'successful_matches': merge_stats['successful_matches'],
+                'failed_matches': merge_stats['failed_matches'],
+                'enhanced_with_orders': merge_stats['enhanced_with_orders'],
+                'default_orders_used': merge_stats['default_orders_used'],
+                'cycle_year_mismatches': merge_stats['cycle_year_mismatches'],
+                'match_success_rate': f"{merge_stats['successful_matches']}/{merge_stats['successful_matches'] + merge_stats['failed_matches']}" if (merge_stats['successful_matches'] + merge_stats['failed_matches']) > 0 else "0/0"
+            }]
+            
+            summary_filepath = self.export_to_excel(
+                merge_summary, 
+                f"06_merge_summary_{cycle_year}", 
+                f"Merge_Summary_{cycle_year}"
+            )
+            if summary_filepath:
+                logging.info(f"Merge summary exported to: {summary_filepath}")
 
             return merged_data
 
         except Exception as e:
             logging.error(f"Error merging matching brands data: {e}")
+            import traceback
+            logging.error(f"Full traceback: {traceback.format_exc()}")
             return []
 
     def enhance_merged_data_with_orders(self, merged_data):
