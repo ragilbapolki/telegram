@@ -6,4 +6,4 @@ report_app.log
 report_app.log
 debug_exports/
 reports/
-
+config.py
