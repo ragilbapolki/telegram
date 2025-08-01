@@ -606,12 +606,14 @@ class ReportGenerator:
                     difference = current_week_sum - previous_week_sum
                     diff_str = f"{difference:3.0f}" if difference >= 0 else f"{difference:4.0f}"
                     category3_name = (category3[:8] + "..") if len(category3) > 8 else category3
+                    # report_lines.append(f"{category3_name:<6}:{current_week_sum:>6.1f}|{previous_week_sum:>6.1f}|{diff_str:>5s}|(p:{summary['total_billing']:.1f})/(t:{summary['total_target']:.1f}){summary['percentage']:>3.0f}%")
                     report_lines.append(f"{category3_name:<6}:{current_week_sum:>6.1f}|{previous_week_sum:>6.1f}|{diff_str:>5s}|{summary['percentage']:>3.0f}%")
             
             if gd_current_week > 0 or gd_previous_week > 0 or gd_total_billing > 0:
                 categories_displayed += 1
                 gd_difference = gd_current_week - gd_previous_week
                 gd_diff_str = f"{gd_difference:3.0f}" if gd_difference >= 0 else f"{gd_difference:4.0f}"
+                # report_lines.append(f"{'GD':<6}:{gd_current_week:>6.1f}|{gd_previous_week:>6.1f}|{gd_diff_str:>5s}|p:{gd_total_billing})/t:({gd_total_target}){gd_percentage:>3.0f}%")
                 report_lines.append(f"{'GD':<6}:{gd_current_week:>6.1f}|{gd_previous_week:>6.1f}|{gd_diff_str:>5s}|{gd_percentage:>3.0f}%")
             
             total_tw = sum(s['current_week_sum'] for s in category3_summary.values())
@@ -667,6 +669,7 @@ class ReportGenerator:
                         if category5 == 'DM16':
                             logging.debug(f"DEBUG DM16: billing={data['qty_billing_sum']:.2f}, target={data['qty_target_ae']:.2f}, ach={ach_percentage:.1f}%")
                         
+                        # report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>4s}|(p:{data['qty_billing_sum'] })/(t:{data['qty_target_ae']}){ach_percentage:>3.0f}%")
                         report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>4s}|{ach_percentage:>3.0f}%")
                     
                     report_lines.append("```")
@@ -1028,12 +1031,14 @@ class ReportGenerator:
                     difference = current_week_sum - previous_week_sum
                     diff_str = f"{difference:3.0f}" if difference >= 0 else f"{difference:4.0f}"
                     category3_name = (category3[:8] + "..") if len(category3) > 8 else category3
+                    # report_lines.append(f"{category3_name:<6}:{current_week_sum:>6.1f}|{previous_week_sum:>6.1f}|{diff_str:>5s}|(p:{data['qty_billing_sum'] })/(t:{data['qty_target_ae']}){summary['percentage']:>3.0f}%")
                     report_lines.append(f"{category3_name:<6}:{current_week_sum:>6.1f}|{previous_week_sum:>6.1f}|{diff_str:>5s}|{summary['percentage']:>3.0f}%")
             
             if gd_current_week > 0 or gd_previous_week > 0 or gd_total_billing > 0:
                 categories_displayed += 1
                 gd_difference = gd_current_week - gd_previous_week
                 gd_diff_str = f"{gd_difference:3.0f}" if gd_difference >= 0 else f"{gd_difference:4.0f}"
+                # report_lines.append(f"{'GD':<6}:{gd_current_week:>6.1f}|{gd_previous_week:>6.1f}|{gd_diff_str:>5s}|(p:{gd_total_billing} / t:{gd_total_target}){gd_percentage:>3.0f}%")
                 report_lines.append(f"{'GD':<6}:{gd_current_week:>6.1f}|{gd_previous_week:>6.1f}|{gd_diff_str:>5s}|{gd_percentage:>3.0f}%")
             
             total_tw = sum(s['current_week_sum'] for s in category3_summary.values())
@@ -1080,6 +1085,7 @@ class ReportGenerator:
                         diff_str = f"{difference:3.0f}" if difference >= 0 else f"{difference:4.0f}"
                         ach_percentage = (data['qty_billing_sum'] / data['qty_target_ae'] * 100) if data['qty_target_ae'] > 0 else 0
                         brand_name = (category5[:10] + "..") if len(category5) > 10 else category5
+                        # report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>4s}|(p:{data['qty_billing_sum']}/t:{data['qty_target_ae']}){ach_percentage:>3.0f}%")
                         report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>4s}|{ach_percentage:>3.0f}%")
                     
                     report_lines.append("```")
@@ -1098,3 +1104,410 @@ class ReportGenerator:
             import traceback
             logging.error(f"Full traceback: {traceback.format_exc()}")
             return f"❌ Error generating report: {str(e)}"
+        
+    def generate_sales_office_report(self, merged_brands, cycle_year, cycle, current_week, vkbur_desc, current_week2, merger_detail):
+        try:
+            if not merged_brands:
+                return None
+            
+            # Get summary data with sales office grouping
+            summary_with_sales_office = self.data_processor.create_summary_with_sales_office(merged_brands)
+            if not summary_with_sales_office:
+                return None
+            
+            # Filter data for specific sales office
+            sales_office_data = [item for item in summary_with_sales_office if item.get('vkbur_desc') == vkbur_desc]
+            if not sales_office_data:
+                return None
+            
+            omset_ideal_percentage = (current_week2 / 4 * 100)
+            
+            def safe_float(value):
+                try:
+                    return float(value) if value is not None else 0.0
+                except (ValueError, TypeError):
+                    return 0.0
+            
+            # Analyze available data
+            available_weeks = set()
+            available_cycles = set()
+            data_samples = {}
+            sales_office_items_count = 0
+            
+            for item in summary_with_sales_office:
+                if item.get('vkbur_desc') == vkbur_desc:
+                    sales_office_items_count += 1
+                    item_cycle = str(item.get('cycle', ''))
+                    item_week = str(item.get('week1', ''))
+                    item_brand = item.get('category5', 'Unknown')
+                    item_value = safe_float(item.get('qty_billing_sum'))
+                    
+                    available_cycles.add(item_cycle)
+                    cycle_week_combo = f"Cy{item_cycle}_W{item_week}"
+                    available_weeks.add(cycle_week_combo)
+                    
+                    if cycle_week_combo not in data_samples:
+                        data_samples[cycle_week_combo] = []
+                    data_samples[cycle_week_combo].append({
+                        'brand': item_brand,
+                        'value': item_value,
+                        'cycle': item_cycle,
+                        'week': item_week
+                    })
+            
+            # Log data samples analysis
+            for combo, samples in sorted(data_samples.items()):
+                sample_count = len(samples)
+                total_value = sum(s['value'] for s in samples)
+                non_zero_count = len([s for s in samples if s['value'] > 0])
+                
+                top_brands = sorted([s for s in samples if s['value'] > 0], 
+                                key=lambda x: x['value'], reverse=True)[:3]
+            
+            # Determine current week to use
+            current_week_str = str(current_week)
+            current_week2_str = str(current_week2)
+            cycle_str = str(cycle)
+            
+            possible_current_week_keys = [
+                f"Cy{cycle_str}_W{current_week2_str}",
+                f"Cy{cycle_str}_W{current_week_str}",
+            ]
+            
+            if int(cycle_str) > 1:
+                possible_current_week_keys.extend([
+                    f"Cy{int(cycle_str)-1}_W{current_week2_str}",
+                    f"Cy{int(cycle_str)-1}_W{current_week_str}",
+                ])
+            
+            current_week_to_use = None
+            current_week_key_found = None
+            current_cycle_to_use = cycle_str
+            
+            for i, test_key in enumerate(possible_current_week_keys):
+                is_available = test_key in available_weeks
+                has_data = False
+                data_count = 0
+                
+                if is_available and test_key in data_samples:
+                    data_with_values = [s for s in data_samples[test_key] if s['value'] > 0]
+                    has_data = len(data_with_values) > 0
+                    data_count = len(data_with_values)
+                
+                status = f"✓ HAS DATA ({data_count} items)" if has_data else ("✓ AVAILABLE (no values)" if is_available else "✗ not available")
+                
+                if has_data and not current_week_to_use:
+                    cycle_part, week_part = test_key.replace('Cy', '').split('_W')
+                    current_cycle_to_use = cycle_part
+                    current_week_to_use = week_part
+                    current_week_key_found = test_key
+                    break
+            
+            # Fallback for current week
+            if not current_week_to_use:
+                for test_cycle in sorted(available_cycles, reverse=True):
+                    test_key = f"Cy{test_cycle}_W{current_week2_str}"
+                    if test_key in available_weeks:
+                        current_cycle_to_use = test_cycle
+                        current_week_to_use = current_week2_str
+                        current_week_key_found = test_key
+                        break
+                
+                if not current_week_to_use:
+                    current_cycle_to_use = cycle_str
+                    current_week_to_use = current_week2_str
+                    current_week_key_found = f"Cy{cycle_str}_W{current_week2_str}"
+            
+            current_week_int = int(current_week_to_use)
+            current_cycle_int = int(current_cycle_to_use)
+            
+            # Determine previous week
+            previous_week_candidates = []
+            
+            for week_offset in [1, 2, 3]:
+                if current_week_int > week_offset:
+                    previous_week_candidates.append((current_cycle_to_use, str(current_week_int - week_offset)))
+            
+            if current_cycle_int > 1:
+                prev_cycle_str = str(current_cycle_int - 1)
+                previous_week_candidates.append((prev_cycle_str, current_week_to_use))
+                for test_week in [str(current_week_int + 1), str(current_week_int - 1), "4", "3", "2", "1"]:
+                    if test_week != current_week_to_use:
+                        previous_week_candidates.append((prev_cycle_str, test_week))
+            
+            previous_cycle = None
+            previous_week = None
+            
+            for i, (candidate_cycle, candidate_week) in enumerate(previous_week_candidates):
+                candidate_key = f"Cy{candidate_cycle}_W{candidate_week}"
+                is_available = candidate_key in available_weeks
+                
+                has_data = False
+                data_count = 0
+                if is_available and candidate_key in data_samples:
+                    data_with_values = [s for s in data_samples[candidate_key] if s['value'] > 0]
+                    has_data = len(data_with_values) > 0
+                    data_count = len(data_with_values)
+                
+                status = f"✓ HAS DATA ({data_count} items)" if has_data else ("✓ AVAILABLE (no values)" if is_available else "✗ not available")
+                
+                if has_data and not previous_cycle:
+                    previous_cycle = candidate_cycle
+                    previous_week = candidate_week
+                    break
+            
+            # Fallback for previous week
+            if not previous_cycle:
+                for combo, samples in data_samples.items():
+                    if any(s['value'] > 0 for s in samples) and combo != current_week_key_found:
+                        parts = combo.replace('Cy', '').split('_W')
+                        if len(parts) == 2:
+                            previous_cycle = parts[0]
+                            previous_week = parts[1]
+                            break
+                
+                if not previous_cycle:
+                    previous_cycle = str(current_cycle_int - 1) if current_cycle_int > 1 else current_cycle_to_use
+                    previous_week = str(current_week_int - 1) if current_week_int > 1 else "1"
+            
+            # Process data by category5 (brand)
+            category5_summary = {}
+            processed_items = 0
+            current_week_matches = 0
+            previous_week_matches = 0
+            
+            current_week_key = f"{current_cycle_to_use}_{current_week_to_use}"
+            previous_week_key = f"{previous_cycle}_{previous_week}"
+            
+            for item in summary_with_sales_office:
+                if item.get('vkbur_desc') != vkbur_desc:
+                    continue
+                    
+                processed_items += 1
+                category5 = item.get('category5')
+                week = str(item['week1'])
+                cycle_item = str(item.get('cycle'))
+                billing_value = safe_float(item.get('qty_billing_sum'))
+                target_value = safe_float(item.get('qty_target_ae'))
+                
+                if not category5:
+                    continue
+                    
+                if category5 not in category5_summary:
+                    category5_summary[category5] = {
+                        'qty_billing_sum': 0.0,
+                        'qty_target_ae': 0.0,
+                        'weeks_data': {},
+                        'category1': item.get('category1'),
+                        'category2': item.get('category2'),
+                        'category3': item.get('category3'),
+                        'order': item.get('order', 0),
+                        'processed_targets': set(),
+                        'regional_contexts': item.get('regional_contexts', '')
+                    }
+                
+                # Process targets (avoid duplicates)
+                target_key = f"{cycle_item}_{week}_{category5}"
+                if cycle_item == current_cycle_to_use and target_value > 0 and target_key not in category5_summary[category5]['processed_targets']:
+                    category5_summary[category5]['qty_target_ae'] += target_value
+                    category5_summary[category5]['processed_targets'].add(target_key)
+                
+                # Process billing for current cycle
+                if cycle_item == current_cycle_to_use:
+                    category5_summary[category5]['qty_billing_sum'] += billing_value
+                
+                # Track weekly data
+                cycle_week_key = f"{cycle_item}_{week}"
+                
+                if cycle_week_key not in category5_summary[category5]['weeks_data']:
+                    category5_summary[category5]['weeks_data'][cycle_week_key] = 0.0
+                category5_summary[category5]['weeks_data'][cycle_week_key] += billing_value
+                
+                # Count matches
+                if cycle_item == current_cycle_to_use and week == current_week_to_use:
+                    current_week_matches += 1
+                    if billing_value > 0:
+                        logging.debug(f"🔍 TW Match: {category5} += {billing_value} (cycle:{cycle_item}, week:{week})")
+                elif cycle_item == previous_cycle and week == previous_week:
+                    previous_week_matches += 1
+            
+            # Filter meaningful data
+            filtered_summary = {}
+            for brand_name, data in category5_summary.items():
+                tw_value = data['weeks_data'].get(current_week_key, 0)
+                lw_value = data['weeks_data'].get(previous_week_key, 0)
+                total_billing = data['qty_billing_sum']
+                total_target = data['qty_target_ae']
+                
+                if tw_value > 0 or lw_value > 0 or total_billing > 0 or total_target > 0:
+                    filtered_summary[brand_name] = data
+            
+            if not filtered_summary:
+                return "❌ Tidak ada data yang dapat ditampilkan untuk periode dan sales office ini."
+            
+            matched_summary = filtered_summary
+            
+            # Group by category3
+            category3_groups = {}
+            for category5, data in matched_summary.items():
+                category3 = data['category3'] or 'UNKNOWN'
+                if category3 not in category3_groups:
+                    category3_groups[category3] = {}
+                category3_groups[category3][category5] = data
+            
+            # Create category3 summary
+            category3_summary = {}
+            for category3, brands in category3_groups.items():
+                current_week_sum = 0
+                previous_week_sum = 0
+                total_billing = 0
+                total_target = 0
+                
+                for category5, data in brands.items():
+                    current_week_sum += data['weeks_data'].get(current_week_key, 0)
+                    previous_week_sum += data['weeks_data'].get(previous_week_key, 0)
+                    total_billing += data['qty_billing_sum']
+                    total_target += data['qty_target_ae']
+                
+                percentage = (total_billing / total_target * 100) if total_target > 0 else 0
+                category3_summary[category3] = {
+                    'current_week_sum': current_week_sum,
+                    'previous_week_sum': previous_week_sum,
+                    'total_billing': total_billing,
+                    'total_target': total_target,
+                    'percentage': percentage,
+                    'brands': brands
+                }
+            
+            # Calculate GD totals
+            gd_current_week = 0
+            gd_previous_week = 0
+            gd_total_billing = 0
+            gd_total_target = 0
+            
+            for category5, data in matched_summary.items():
+                if data['category2'] == 'GD' or data['category1'] == 'GD':
+                    gd_current_week += data['weeks_data'].get(current_week_key, 0)
+                    gd_previous_week += data['weeks_data'].get(previous_week_key, 0)
+                    gd_total_billing += data['qty_billing_sum']
+                    gd_total_target += data['qty_target_ae']
+            
+            gd_percentage = (gd_total_billing / gd_total_target * 100) if gd_total_target > 0 else 0
+            
+            # Calculate GD+PLT totals
+            gd_plt_current_week = 0
+            gd_plt_previous_week = 0
+            gd_plt_total_billing = 0
+            gd_plt_total_target = 0
+            
+            for category5, data in matched_summary.items():
+                if data['category2'] in ['GD', 'PLT'] or data['category1'] in ['GD', 'PLT']:
+                    gd_plt_current_week += data['weeks_data'].get(current_week_key, 0)
+                    gd_plt_previous_week += data['weeks_data'].get(previous_week_key, 0)
+                    gd_plt_total_billing += data['qty_billing_sum']
+                    gd_plt_total_target += data['qty_target_ae']
+            
+            gd_plt_percentage = self.round_up_percentage(gd_plt_total_billing / gd_plt_total_target * 100) if gd_plt_total_target > 0 else 0
+            
+            # Determine display name for sales office
+            found = any(vkbur_desc in item for item in merger_detail)
+            if found:
+                result_sales_office_name = merger_detail[1].replace('Merged from: ', '')
+            else:
+                result_sales_office_name = vkbur_desc
+            
+            # Get regional context for additional info
+            regional_contexts = set()
+            for item in sales_office_data:
+                if item.get('regional_contexts'):
+                    contexts = [ctx.strip() for ctx in item['regional_contexts'].split(',')]
+                    regional_contexts.update(contexts)
+            regional_context_str = ', '.join(sorted(regional_contexts)) if regional_contexts else 'N/A'
+            
+            # Generate report
+            report_lines = []
+            report_lines.append("```")
+            report_lines.append(f"📊 REPORT OMSET WEEKLY (BOX)")
+            report_lines.append(f"🏢 SALES OFFICE: {result_sales_office_name.upper()}")
+            report_lines.append(f"🌍 Regional Context: {regional_context_str}")
+            report_lines.append(f"📅 Cy {current_cycle_to_use} {cycle_year} week {current_week_to_use} omset ideal {omset_ideal_percentage:.0f}% vs FUF")
+            report_lines.append("```")
+            report_lines.append("```")
+            report_lines.append(f"CATEGORY TW | LW | +/- | ACH%")
+            report_lines.append("─" * 26)
+            
+            # Display category3 comparison
+            categories_displayed = 0
+            for category3, summary in sorted(category3_summary.items()):
+                current_week_sum = summary['current_week_sum']
+                previous_week_sum = summary['previous_week_sum']
+                
+                if current_week_sum > 0 or previous_week_sum > 0 or summary['total_billing'] > 0:
+                    categories_displayed += 1
+                    difference = current_week_sum - previous_week_sum
+                    diff_str = f"{difference:3.0f}" if difference >= 0 else f"{difference:4.0f}"
+                    category3_name = (category3[:8] + "..") if len(category3) > 8 else category3
+                    # report_lines.append(f"{category3_name:<6}:{current_week_sum:>6.1f}|{previous_week_sum:>6.1f}|{diff_str:>5s}|(p:{summary['total_billing']:.0f}/t:{summary['total_target']:.0f}){summary['percentage']:>3.0f}%")
+                    report_lines.append(f"{category3_name:<6}:{current_week_sum:>6.1f}|{previous_week_sum:>6.1f}|{diff_str:>5s}|{summary['percentage']:>3.0f}%")
+            
+            # Add GD summary if has data
+            if gd_current_week > 0 or gd_previous_week > 0 or gd_total_billing > 0:
+                categories_displayed += 1
+                gd_difference = gd_current_week - gd_previous_week
+                gd_diff_str = f"{gd_difference:3.0f}" if gd_difference >= 0 else f"{gd_difference:4.0f}"
+                # report_lines.append(f"{'GD':<6}:{gd_current_week:>6.1f}|{gd_previous_week:>6.1f}|{gd_diff_str:>5s}|(p:{gd_total_billing:.0f}/t:{gd_total_target:.0f}){gd_percentage:>3.0f}%")
+                report_lines.append(f"{'GD':<6}:{gd_current_week:>6.1f}|{gd_previous_week:>6.1f}|{gd_diff_str:>5s}|{gd_percentage:>3.0f}%")
+            
+            report_lines.append("```")
+            
+            if categories_displayed == 0:
+                report_lines.append("❌ Tidak ada data kategori yang dapat ditampilkan.")
+                report_lines.append(f"Debug info: Found {len(matched_summary)} brands, {len(category3_groups)} categories")
+                report_lines.append("")
+            
+            # Brand performance sections
+            brands_sections_added = 0
+            for category3 in sorted(category3_groups.keys()):
+                brands = category3_groups[category3]
+                meaningful_brands = []
+                
+                for category5, data in brands.items():
+                    current_week_sum = data['weeks_data'].get(current_week_key, 0)
+                    previous_week_sum = data['weeks_data'].get(previous_week_key, 0)
+                    if current_week_sum > 0 or previous_week_sum > 0 or data['qty_billing_sum'] > 0:
+                        meaningful_brands.append((category5, data))
+                
+                if meaningful_brands:
+                    brands_sections_added += 1
+                    report_lines.append(f"📈 {category3} BRAND PERFORMANCE:")
+                    report_lines.append("```")
+                    report_lines.append(f"BRAND      TW | LW | +/- | ACH%")
+                    report_lines.append("─" * 26)
+                    
+                    sorted_brands = sorted(meaningful_brands, key=lambda x: (x[1]['order'], x[0]))
+                    for category5, data in sorted_brands:
+                        current_week_sum = data['weeks_data'].get(current_week_key, 0)
+                        previous_week_sum = data['weeks_data'].get(previous_week_key, 0)
+                        difference = current_week_sum - previous_week_sum
+                        diff_str = f"{difference:3.0f}" if difference >= 0 else f"{difference:4.0f}"
+                        ach_percentage = (data['qty_billing_sum'] / data['qty_target_ae'] * 100) if data['qty_target_ae'] > 0 else 0
+                        brand_name = (category5[:10] + "..") if len(category5) > 10 else category5
+                        report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>4s}|{ach_percentage:>3.0f}%")
+                        # report_lines.append(f"{brand_name:<6}:{current_week_sum:>5.1f}|{previous_week_sum:>5.1f}|{diff_str:>4s}|(p:{data['qty_billing_sum']:.0f}/t:{data['qty_target_ae']:.0f}){ach_percentage:>3.0f}%")
+                    
+                    report_lines.append("```")
+                    report_lines.append("")
+            
+            if brands_sections_added == 0:
+                report_lines.append("❌ Tidak ada data brand yang dapat ditampilkan.")
+                report_lines.append("")
+            
+            report_message = "\n".join(report_lines)
+            
+            return report_message
+            
+        except Exception as e:
+            logging.error(f"Error generating sales office report: {e}")
+            import traceback
+            logging.error(f"Full traceback: {traceback.format_exc()}")
+            return f"❌ Error generating sales office report: {str(e)}"

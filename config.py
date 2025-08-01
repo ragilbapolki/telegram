@@ -4,8 +4,8 @@ from datetime import datetime
 
 # Date Configuration
 # CURRENT_DATE = '2025-07-19'
-# CURRENT_DATE = '2025-07-26'
-CURRENT_DATE = datetime.now().strftime('%Y-%m-%d')
+CURRENT_DATE = '2025-07-05'
+# CURRENT_DATE = datetime.now().strftime('%Y-%m-%d')
 SATUAN = 'BOX'
 
 # SAP API Configuration

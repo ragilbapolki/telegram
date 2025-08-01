@@ -50,9 +50,6 @@ class SAPService:
             return []
 
     def load_brand_data(self):
-        """
-        Load data brand dari SAP API (ZCDSV_SD_RMWEEKLY_SUM)
-        """
         try:
             auth = (SAP_USERNAME, SAP_PASSWORD)
             headers = {

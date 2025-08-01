@@ -13,13 +13,20 @@ class WhatsAppService:
         self.base_url = f"https://api.green-api.com/waInstance{self.instance_id}"
         self.db_config = DB_CONFIG
         
+        # Group type mapping based on your database schema
+        self.GROUP_TYPES = {
+            'sales_office': 1,
+            'regional': 2, 
+            'national': 3,
+            'l': 4
+        }
+        
         # Verify credentials on initialization
         if not self.instance_id or not self.access_token:
             logging.error("WhatsApp Green API credentials not configured")
             raise ValueError("GREEN_API_INSTANCE_ID and GREEN_API_ACCESS_TOKEN must be set")
     
     def get_connection(self):
-        """Create and return database connection"""
         try:
             connection = mysql.connector.connect(**self.db_config)
             return connection
@@ -28,23 +35,31 @@ class WhatsAppService:
             raise
     
     def get_group_id_from_db(self, group_type=None):
-        """Get group ID from database with optional group type filter"""
         try:
             connection = self.get_connection()
             cursor = connection.cursor()
 
             if group_type:
+                type_id = self.GROUP_TYPES.get(group_type.lower())
+                if type_id is None:
+                    logging.error(f"Invalid group_type: {group_type}. Valid types: {list(self.GROUP_TYPES.keys())}")
+                    return None
+                
                 query = """
                     SELECT group_id 
                     FROM whatsapp_groups 
-                    WHERE is_active = 1 AND group_type = %s
+                    WHERE is_active = 1 AND type = %s
+                    ORDER BY created_at DESC
+                    LIMIT 1
                 """
-                cursor.execute(query, (group_type,))
+                cursor.execute(query, (type_id,))
             else:
                 query = """
                     SELECT group_id 
                     FROM whatsapp_groups 
                     WHERE is_active = 1
+                    ORDER BY created_at DESC
+                    LIMIT 1
                 """
                 cursor.execute(query)
             
@@ -52,8 +67,10 @@ class WhatsAppService:
             
             if result:
                 group_id = result[0]
+                logging.info(f"Found group_id: {group_id} for type: {group_type}")
                 return group_id
             else:
+                logging.warning(f"No active WhatsApp group found for type: {group_type}")
                 return None
 
         except Exception as e:
@@ -64,16 +81,6 @@ class WhatsAppService:
                 connection.close()
     
     def send_text_message(self, chat_id: str, message: str) -> bool:
-        """
-        Send text message to WhatsApp chat (individual or group)
-        
-        Args:
-            chat_id: Chat ID (phone number with country code for individual, or group ID for groups)
-            message: Message text to send
-            
-        Returns:
-            bool: True if message sent successfully, False otherwise
-        """
         try:
             url = f"{self.base_url}/sendMessage/{self.access_token}"
             
@@ -105,34 +112,46 @@ class WhatsAppService:
             return False
     
     def send_group_message(self, group_id: str, message: str) -> bool:
-        """
-        Send message to WhatsApp group
-        
-        Args:
-            group_id: WhatsApp group ID (format: phone_number-group_timestamp@g.us)
-            message: Message text to send
-            
-        Returns:
-            bool: True if message sent successfully, False otherwise
-        """
         return self.send_text_message(group_id, message)
     
-    def send_regional_report(self, message: str) -> bool:
-        """
-        Send regional report to appropriate WhatsApp group (using database)
-        
-        Args:
-            message: Report message to send
-            
-        Returns:
-            bool: True if message sent successfully, False otherwise
-        """
+    def send_national_report(self, message: str) -> bool:
         try:
-            # Get group ID from database
+            logging.info("Sending national report to WhatsApp...")
+            
+            # Get national group ID from database (type = 3)
+            group_id = self.get_group_id_from_db('national')
+            
+            # If no national group found, try to get default group
+            if not group_id:
+                logging.warning("No national WhatsApp group found, trying default group")
+                group_id = self.get_group_id_from_db()
+            
+            if not group_id:
+                logging.error("No WhatsApp group found in database for national report")
+                return False
+            
+            # Send the message
+            success = self.send_group_message(group_id, message)
+            
+            if success:
+                logging.info(f"✓ WhatsApp national report sent to group: {group_id}")
+            else:
+                logging.error(f"✗ Failed to send WhatsApp national report to group")
+            
+            return success
+            
+        except Exception as e:
+            logging.error(f"Error sending national WhatsApp report: {str(e)}")
+            return False
+
+    def send_regional_report(self, message: str) -> bool:
+        try:
+            # Get regional group ID from database (type = 2)
             group_id = self.get_group_id_from_db('regional')
             
             # If no regional group found, try to get default group
             if not group_id:
+                logging.warning("No regional WhatsApp group found, trying default group")
                 group_id = self.get_group_id_from_db()
             
             if not group_id:
@@ -153,42 +172,64 @@ class WhatsAppService:
             logging.error(f"Error sending regional WhatsApp report: {str(e)}")
             return False
 
-    # ADD THIS METHOD - Missing method that your main app is looking for
-    def send_national_report(self, message: str) -> bool:
-        """
-        Send national report to appropriate WhatsApp group (using database)
-        This is the method your main application is trying to call
-        
-        Args:
-            message: National report message to send
-            
-        Returns:
-            bool: True if message sent successfully, False otherwise
-        """
+    def send_sales_office_report(self, message: str) -> bool:
         try:
-            logging.info("Sending national report to WhatsApp...")
+            logging.info("Sending sales office report to WhatsApp...")
             
-            # Get national group ID from database
-            group_id = self.get_group_id_from_db('national')
+            # Get sales office group ID from database (type = 1)
+            group_id = self.get_group_id_from_db('sales_office')
             
-            # If no national group found, try to get default group
+            # If no sales office group found, try to get default group
             if not group_id:
+                logging.warning("No sales office WhatsApp group found, trying default group")
                 group_id = self.get_group_id_from_db()
             
             if not group_id:
-                logging.error("No WhatsApp group found in database for national report")
+                logging.error("No WhatsApp group found in database for sales office report")
                 return False
             
             # Send the message
             success = self.send_group_message(group_id, message)
             
             if success:
-                logging.info(f"✓ WhatsApp national report sent to group: {group_id}")
+                logging.info(f"✓ WhatsApp sales office report sent to group: {group_id}")
             else:
-                logging.error(f"✗ Failed to send WhatsApp national report to group")
+                logging.error(f"✗ Failed to send WhatsApp sales office report to group")
             
             return success
             
         except Exception as e:
-            logging.error(f"Error sending national WhatsApp report: {str(e)}")
+            logging.error(f"Error sending sales office WhatsApp report: {str(e)}")
             return False
+
+    def get_all_group_types(self) -> Dict[str, int]:
+        return self.GROUP_TYPES.copy()
+
+    def list_active_groups(self) -> List[Dict]:
+        try:
+            connection = self.get_connection()
+            cursor = connection.cursor(dictionary=True)
+            
+            query = """
+                SELECT id, group_id, group_name, type, is_active, created_at, updated_at
+                FROM whatsapp_groups 
+                WHERE is_active = 1
+                ORDER BY type, created_at DESC
+            """
+            cursor.execute(query)
+            
+            results = cursor.fetchall()
+            
+            # Add readable type names
+            type_names = {1: 'Sales Office', 2: 'Regional', 3: 'National', 4: 'L'}
+            for result in results:
+                result['type_name'] = type_names.get(result['type'], 'Unknown')
+            
+            return results
+            
+        except Exception as e:
+            logging.error(f"Error listing active groups: {str(e)}")
+            return []
+        finally:
+            if 'connection' in locals():
+                connection.close()
